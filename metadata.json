@@ -1,0 +1,6 @@
+{
+  "name": "Bashar Apk App",
+  "description": "Discover and download trusted, high-performance Android APK applications, tools, and digital solutions with version history and verified security.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

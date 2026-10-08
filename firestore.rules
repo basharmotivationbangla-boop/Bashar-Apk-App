@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isValidString(val, minLen, maxLen) {
+      return val is string && val.size() >= minLen && val.size() <= maxLen;
+    }
+
+    // 1. Live Community Chat Messages
+    match /chat_messages/{messageId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['senderName', 'text', 'timestamp'])
+                    && isValidString(request.resource.data.senderName, 1, 60)
+                    && isValidString(request.resource.data.text, 1, 1000);
+      allow update, delete: if false;
+    }
+
+    // 2. User App Reviews & Ratings
+    match /app_reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['appId', 'userName', 'rating', 'comment', 'timestamp'])
+                    && isValidString(request.resource.data.appId, 1, 128)
+                    && isValidString(request.resource.data.userName, 1, 60)
+                    && isValidString(request.resource.data.comment, 1, 2000)
+                    && request.resource.data.rating >= 1
+                    && request.resource.data.rating <= 5;
+      allow update, delete: if false;
+    }
+
+    // 3. Contact & Feedback Inquiries
+    match /contact_messages/{messageId} {
+      allow read: if false; // Kept private for administration
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'message', 'timestamp'])
+                    && isValidString(request.resource.data.name, 1, 100)
+                    && isValidString(request.resource.data.email, 3, 150)
+                    && isValidString(request.resource.data.message, 1, 3000);
+      allow update, delete: if false;
+    }
+
+    // 4. User APK App Requests
+    match /app_requests/{requestId} {
+      allow read: if false;
+      allow create: if request.resource.data.keys().hasAll(['requesterName', 'appTitle', 'timestamp'])
+                    && isValidString(request.resource.data.appTitle, 1, 120);
+      allow update, delete: if false;
+    }
+
+    // 5. APK Applications Directory
+    match /apps/{appId} {
+      allow read: if true;
+      allow write: if true; // Managed via admin console or custom auth
+    }
+
+    // 6. Download Tracking Events
+    match /downloads/{downloadId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['appId', 'appName', 'timestamp']);
+      allow update, delete: if false;
+    }
+  }
+}

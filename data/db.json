@@ -1,0 +1,226 @@
+{
+  "admin": {
+    "id": "admin-master",
+    "username": "admin",
+    "email": "basharmotivationbangla@gmail.com",
+    "passwordHash": "6ad25ba205f1d851f3e6821b26008a84cf74cad0e7afb837ba0cea83e4851396794bc4ed7bb8ff46b27ce8e073cd82a456ea110a68c31dc5e026e0f38a7c88dc",
+    "passwordSalt": "35c595b75d36e5ceb085825805f7a0cb",
+    "role": "superadmin",
+    "lastLogin": "2026-10-08T09:37:44.283Z"
+  },
+  "settings": {
+    "name": "Bashar Apk App",
+    "tagline": "Trusted Android Apps, Tools & Digital Solutions",
+    "description": "Download verified, secure, and high-performance Android APK applications with full version history, direct mirrors, and technical specifications.",
+    "logoUrl": "",
+    "faviconUrl": "",
+    "primaryColor": "#10b981",
+    "secondaryColor": "#06b6d4",
+    "heroTitle": "Discover Useful Apps, Tools & Digital Solutions",
+    "heroSubtitle": "Download trusted and useful Android applications with complete details, screenshots, version information, and direct verified access.",
+    "heroExploreText": "Explore Apps",
+    "heroLatestText": "Latest Updates",
+    "footerText": "© 2026 Bashar Apk App. All rights reserved. Providing safe, verified, and high-speed Android applications for worldwide users.",
+    "contactEmail": "basharmotivationbangla@gmail.com",
+    "contactPhone": "+880 1700 000000",
+    "contactAddress": "Dhaka, Bangladesh · Global Digital Network",
+    "socialLinks": {
+      "facebook": "https://facebook.com/basharmotivationbangla",
+      "twitter": "https://twitter.com/basharapk",
+      "telegram": "https://t.me/basharapkapp",
+      "youtube": "https://youtube.com/@basharmotivationbangla",
+      "github": "https://github.com/basharapk",
+      "linkedin": "https://linkedin.com/company/basharapk"
+    },
+    "seo": {
+      "metaTitle": "Bashar Apk App - Trusted Android Apps & Digital Solutions",
+      "metaDescription": "Discover and download trusted, high-performance Android APK applications, tools, and digital solutions with version history and verified security.",
+      "metaKeywords": "bashar apk app, android apk download, trusted apk, free apps, bangla keyboard apk, video downloader apk"
+    }
+  },
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Tools & Utilities",
+      "slug": "tools",
+      "description": "Essential system utilities, boosters, clean and efficient Android tools.",
+      "icon": "Wrench",
+      "color": "#10b981"
+    },
+    {
+      "id": "cat-2",
+      "name": "Productivity",
+      "slug": "productivity",
+      "description": "Notes, office tools, task managers, and workflow accelerators.",
+      "icon": "CheckSquare",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "cat-3",
+      "name": "Media & Video",
+      "slug": "media-video",
+      "description": "Video downloaders, high-definition players, and audio engines.",
+      "icon": "Video",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "cat-4",
+      "name": "Security & VPN",
+      "slug": "security-vpn",
+      "description": "Shield your identity with encrypted proxies, antivirus, and vaults.",
+      "icon": "ShieldCheck",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "cat-5",
+      "name": "Education & Knowledge",
+      "slug": "education",
+      "description": "Islamic studies, languages, exam preps, and skill learning apps.",
+      "icon": "BookOpen",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "cat-6",
+      "name": "Communication & Social",
+      "slug": "communication",
+      "description": "Ultra-fast messaging, Bangla typing keyboards, and voice chats.",
+      "icon": "MessageCircle",
+      "color": "#ec4899"
+    },
+    {
+      "id": "cat-7",
+      "name": "Entertainment & Gaming",
+      "slug": "entertainment",
+      "description": "Streamlined entertainment, casual offline games, and streamers.",
+      "icon": "Gamepad2",
+      "color": "#ef4444"
+    }
+  ],
+  "apps": [],
+  "downloads": [],
+  "contactMessages": [
+    {
+      "id": "msg-1",
+      "name": "Rashid Khan",
+      "email": "rashid.k@example.com",
+      "subject": "Inquiry regarding app partnership",
+      "message": "Hello Bashar team! We developed a productivity tool for students in Bangladesh and would love to publish it on your marketplace.",
+      "timestamp": "2026-10-07T08:50:29.349Z",
+      "status": "unread"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "act-1791452264345",
+      "action": "APP_DELETED",
+      "target": "Updated Test Android Tool",
+      "timestamp": "2026-10-08T09:37:44.345Z",
+      "details": "Deleted app Updated Test Android Tool"
+    },
+    {
+      "id": "act-1791452264333",
+      "action": "APP_UPDATED",
+      "target": "Updated Test Android Tool",
+      "timestamp": "2026-10-08T09:37:44.333Z",
+      "details": "Updated metadata for Updated Test Android Tool"
+    },
+    {
+      "id": "act-1791452264305",
+      "action": "APP_CREATED",
+      "target": "Test Android Tool",
+      "timestamp": "2026-10-08T09:37:44.305Z",
+      "details": "Created new application Test Android Tool (v1.0.0)"
+    },
+    {
+      "id": "act-1791452264283",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:37:44.283Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791452111443",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:35:11.443Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791452024099",
+      "action": "APP_DELETED",
+      "target": "Sample Video Tool",
+      "timestamp": "2026-10-08T09:33:44.099Z",
+      "details": "Deleted app Sample Video Tool"
+    },
+    {
+      "id": "act-1791452024076",
+      "action": "APP_CREATED",
+      "target": "Sample Video Tool",
+      "timestamp": "2026-10-08T09:33:44.076Z",
+      "details": "Created new application Sample Video Tool (v1.0.0)"
+    },
+    {
+      "id": "act-1791452024047",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:33:44.047Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791451707238",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:28:27.238Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791451393538",
+      "action": "APP_DELETED",
+      "target": "Test Tool App",
+      "timestamp": "2026-10-08T09:23:13.538Z",
+      "details": "Deleted app Test Tool App"
+    },
+    {
+      "id": "act-1791451393515",
+      "action": "APP_CREATED",
+      "target": "Test Tool App",
+      "timestamp": "2026-10-08T09:23:13.516Z",
+      "details": "Created new application Test Tool App (v1.0.0)"
+    },
+    {
+      "id": "act-1791451393489",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:23:13.489Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791451381363",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:23:01.363Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791450796655",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T09:13:16.655Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791449442660",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-08T08:50:42.660Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1",
+      "action": "PLATFORM_INITIALIZED",
+      "target": "System",
+      "timestamp": "2026-10-08T08:50:29.349Z",
+      "details": "Bashar Apk App marketplace database primed with verified applications."
+    }
+  ]
+}
