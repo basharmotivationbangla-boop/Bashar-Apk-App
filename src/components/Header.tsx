@@ -78,8 +78,7 @@ export const Header: React.FC = () => {
     { label: t('categories'), path: '/categories' },
     { label: t('popularApps'), path: '/apps?filter=popular' },
     { label: t('latestUpdates'), path: '/apps?filter=latest' },
-    { label: t('about'), path: '/about' },
-    { label: t('contact'), path: '/contact' }
+    { label: t('about'), path: '/about' }
   ];
 
   const handleNavClick = (path: string) => {
@@ -241,14 +240,14 @@ export const Header: React.FC = () => {
               {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-cyan-400" />}
             </button>
 
-            {/* Admin Subtle Access */}
+            {/* Admin Subtle Access (Passwordless) */}
             <button
-              onClick={() => navigate(isAuthenticated ? '/admin' : '/admin/login')}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition-all"
+              onClick={() => navigate('/admin')}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-emerald-400 hover:bg-slate-900 border border-transparent hover:border-slate-800 transition-all cursor-pointer"
               title="Admin Portal"
             >
-              <Lock className="w-3.5 h-3.5" />
-              <span>{isAuthenticated ? 'Admin' : 'Admin'}</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Admin</span>
             </button>
 
             {/* Mobile Hamburger Toggle */}
@@ -281,11 +280,11 @@ export const Header: React.FC = () => {
 
             <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
               <button
-                onClick={() => handleNavClick(isAuthenticated ? '/admin' : '/admin/login')}
-                className="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-emerald-400 px-3 py-2"
+                onClick={() => handleNavClick('/admin')}
+                className="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-emerald-400 px-3 py-2 cursor-pointer"
               >
-                <Lock className="w-3.5 h-3.5" />
-                <span>{isAuthenticated ? 'Admin Dashboard' : 'Admin Login'}</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Admin Dashboard</span>
               </button>
 
               <button

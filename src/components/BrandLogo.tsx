@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import defaultLogo from '../assets/images/bashar_apk_official_logo_1791554816506.jpg';
 
 interface BrandLogoProps {
   className?: string;
@@ -13,6 +14,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   size = 'md'
 }) => {
   const { settings, navigate } = useApp();
+  const [imgError, setImgError] = useState(false);
 
   const iconSizes = {
     sm: 'w-7 h-7 text-xs',
@@ -28,30 +30,22 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     xl: 'text-2xl'
   };
 
+  const logoSrc = (!imgError && (settings.logoUrl || defaultLogo)) || defaultLogo;
+
   return (
     <div
       onClick={() => navigate('/')}
       className={`inline-flex items-center gap-2.5 cursor-pointer group select-none ${className}`}
     >
-      {settings.logoUrl ? (
+      <div className={`relative shrink-0 ${iconSizes[size]} rounded-xl overflow-hidden ring-1 ring-emerald-500/30 bg-slate-900/80 shadow-md shadow-emerald-500/10 transition-transform duration-200 group-hover:scale-105 group-hover:ring-emerald-500/50`}>
         <img
-          src={settings.logoUrl}
+          src={logoSrc}
           alt={settings.name || 'Bashar Apk App'}
-          className={`${iconSizes[size]} object-contain rounded-lg transition-transform duration-200 group-hover:scale-105`}
+          onError={() => setImgError(true)}
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover rounded-xl"
         />
-      ) : (
-        <div
-          className={`${iconSizes[size]} shrink-0 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold shadow-lg shadow-emerald-500/20 ring-1 ring-white/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-emerald-500/30`}
-        >
-          {/* Futuristic Android Hex Logo icon */}
-          <svg className="w-5/6 h-5/6 p-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-            <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
-          </svg>
-        </div>
-      )}
+      </div>
 
       {!iconOnly && (
         <div className="flex flex-col leading-tight">

@@ -39,9 +39,9 @@ const defaultSettings: WebsiteSettings = {
   heroExploreText: 'Explore Apps',
   heroLatestText: 'Latest Updates',
   footerText: '© 2026 Bashar Apk App. All rights reserved. Providing safe, verified, and high-speed Android applications for worldwide users.',
-  contactEmail: 'basharmotivationbangla@gmail.com',
-  contactPhone: '+880 1700 000000',
-  contactAddress: 'Dhaka, Bangladesh · Global Digital Network',
+  contactEmail: '',
+  contactPhone: '',
+  contactAddress: '',
   socialLinks: {
     facebook: 'https://facebook.com/basharmotivationbangla',
     twitter: 'https://twitter.com/basharapk',

@@ -7,23 +7,24 @@ import { AdminAppForm } from './AdminAppForm';
 import { AppItem } from '../../types';
 
 export const AdminDashboard: React.FC = () => {
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading, login } = useAuth();
   const { navigate } = useApp();
 
   const [currentTab, setCurrentTab] = useState<string>('apps');
   const [editingApp, setEditingApp] = useState<AppItem | null>(null);
 
+  React.useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      login();
+    }
+  }, [isLoading, isAuthenticated, login]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center text-xs text-slate-400">
-        Verifying secure administrative session...
+        Loading Admin Dashboard...
       </div>
     );
-  }
-
-  if (!isAuthenticated) {
-    navigate('/admin/login');
-    return null;
   }
 
   const handleEditApp = (app: AppItem) => {

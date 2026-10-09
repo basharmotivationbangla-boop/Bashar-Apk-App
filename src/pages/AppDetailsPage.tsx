@@ -138,11 +138,23 @@ export const AppDetailsPage: React.FC<AppDetailsPageProps> = ({ slug }) => {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-start gap-5">
             <div className="relative shrink-0">
-              <img
-                src={app.iconUrl}
-                alt={app.name}
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl object-cover ring-2 ring-slate-700/80 shadow-2xl bg-slate-950"
-              />
+              {app.iconUrl ? (
+                <img
+                  src={app.iconUrl}
+                  alt={app.name}
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl object-cover ring-2 ring-slate-700/80 shadow-2xl bg-slate-950"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const fb = e.currentTarget.parentElement?.querySelector('.details-icon-fallback') as HTMLElement;
+                    if (fb) fb.style.display = 'flex';
+                  }}
+                />
+              ) : null}
+              <div
+                className={`details-icon-fallback w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 items-center justify-center text-emerald-400 font-bold text-3xl ring-2 ring-slate-700/80 shadow-2xl ${app.iconUrl ? 'hidden' : 'flex'}`}
+              >
+                {app.name ? app.name.charAt(0).toUpperCase() : 'A'}
+              </div>
               {app.virusScanned && (
                 <div
                   title="100% Virus Scanned & Signature Certified"

@@ -49,8 +49,8 @@ const initialSettings = {
   name: 'Bashar Apk App',
   tagline: 'Trusted Android Apps, Tools & Digital Solutions',
   description: 'Download verified, secure, and high-performance Android APK applications with full version history, direct mirrors, and technical specifications.',
-  logoUrl: '',
-  faviconUrl: '',
+  logoUrl: '/uploads/logo.png',
+  faviconUrl: '/uploads/logo.png',
   primaryColor: '#10b981',
   secondaryColor: '#06b6d4',
   heroTitle: 'Discover Useful Apps, Tools & Digital Solutions',
@@ -58,9 +58,9 @@ const initialSettings = {
   heroExploreText: 'Explore Apps',
   heroLatestText: 'Latest Updates',
   footerText: '© 2026 Bashar Apk App. All rights reserved. Providing safe, verified, and high-speed Android applications for worldwide users.',
-  contactEmail: 'basharmotivationbangla@gmail.com',
-  contactPhone: '+880 1700 000000',
-  contactAddress: 'Dhaka, Bangladesh · Global Digital Network',
+  contactEmail: '',
+  contactPhone: '',
+  contactAddress: '',
   socialLinks: {
     facebook: 'https://facebook.com/basharmotivationbangla',
     twitter: 'https://twitter.com/basharapk',
@@ -109,7 +109,7 @@ function getDatabase(): DatabaseSchema {
           ...(data.admin || {}),
           id: data.admin?.id || 'admin-master',
           username: data.admin?.username || 'admin',
-          email: data.admin?.email || 'basharmotivationbangla@gmail.com',
+          email: data.admin?.email || 'admin',
           role: 'superadmin',
           passwordSalt: salt,
           passwordHash: hashPassword(masterPassword, salt)
@@ -130,7 +130,7 @@ function getDatabase(): DatabaseSchema {
     admin: {
       id: 'admin-master',
       username: 'admin',
-      email: process.env.ADMIN_EMAIL || 'basharmotivationbangla@gmail.com',
+      email: process.env.ADMIN_EMAIL || 'admin',
       passwordHash: adminHash,
       passwordSalt: adminSalt,
       role: 'superadmin',
@@ -175,84 +175,59 @@ app.use(express.urlencoded({ extended: true, limit: '60mb' }));
 // Static uploads serving
 app.use('/uploads', express.static(UPLOADS_DIR));
 
-// Helper: Require Admin middleware
+// Helper: Require Admin middleware (Passwordless Admin Enabled)
 function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
+  const db = getDatabase();
   const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.status(401).json({ error: 'Unauthorized: Admin authentication token required' });
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.split(' ')[1];
+    const session = activeSessions.get(token);
+    if (session && session.expiresAt >= Date.now()) {
+      (req as any).adminUser = session;
+      return next();
+    }
   }
 
-  const token = authHeader.split(' ')[1];
-  const session = activeSessions.get(token);
-
-  if (!session || session.expiresAt < Date.now()) {
-    if (session) activeSessions.delete(token);
-    return res.status(401).json({ error: 'Session expired or invalid. Please login again.' });
-  }
-
-  (req as any).adminUser = session;
+  // Passwordless admin enabled per user request ("admin পাসওয়ার্ড দিবেন না")
+  // Automatically provide active admin session
+  const defaultAdminSession = {
+    id: db.admin?.id || 'admin-1',
+    username: db.admin?.username || 'admin',
+    email: db.admin?.email || 'admin',
+    expiresAt: Date.now() + 365 * 24 * 60 * 60 * 1000
+  };
+  (req as any).adminUser = defaultAdminSession;
   next();
 }
 
 // ==========================================
-// 1. AUTHENTICATION ENDPOINTS
+// 1. AUTHENTICATION ENDPOINTS (PASSWORDLESS)
 // ==========================================
 
 app.post('/api/auth/login', (req, res) => {
-  const { password } = req.body;
   const ip = req.ip || req.socket.remoteAddress || 'unknown';
-
-  // Rate-limiting check
-  const lock = failedLogins.get(ip);
-  if (lock && lock.lockedUntil > Date.now()) {
-    const minutesLeft = Math.ceil((lock.lockedUntil - Date.now()) / 60000);
-    return res.status(429).json({
-      error: `Too many failed attempts. Temporary lockout active. Please wait ${minutesLeft} minute(s).`
-    });
-  }
-
-  if (!password) {
-    return res.status(400).json({ error: 'Master Admin Password is required.' });
-  }
-
   const db = getDatabase();
-  const isMatch = verifyPassword(password, db.admin.passwordSalt, db.admin.passwordHash);
 
-  if (!isMatch) {
-    const current = failedLogins.get(ip) || { count: 0, lockedUntil: 0 };
-    current.count += 1;
-    if (current.count >= 5) {
-      current.lockedUntil = Date.now() + 15 * 60 * 1000; // 15 mins lock
-    }
-    failedLogins.set(ip, current);
-
-    return res.status(401).json({
-      error: 'Incorrect admin master password. Please verify and try again.',
-      attemptsLeft: Math.max(0, 5 - current.count)
-    });
-  }
-
-  // Clear failed logins upon success
-  failedLogins.delete(ip);
-
-  // Generate cryptographically secure token
+  // Generate session token (No password required)
   const token = crypto.randomBytes(36).toString('hex');
-  const sessionDuration = 7 * 24 * 60 * 60 * 1000; // 7 days
+  const sessionDuration = 365 * 24 * 60 * 60 * 1000; // 1 year
   const sessionData = {
-    id: db.admin.id,
-    username: db.admin.username,
-    email: db.admin.email,
+    id: db.admin?.id || 'admin-1',
+    username: db.admin?.username || 'admin',
+    email: db.admin?.email || 'admin',
     expiresAt: Date.now() + sessionDuration
   };
   activeSessions.set(token, sessionData);
 
-  db.admin.lastLogin = new Date().toISOString();
+  if (db.admin) {
+    db.admin.lastLogin = new Date().toISOString();
+  }
   db.activityLogs.unshift({
     id: 'act-' + Date.now(),
     action: 'ADMIN_LOGIN',
-    target: db.admin.username,
+    target: db.admin?.username || 'admin',
     timestamp: new Date().toISOString(),
-    details: `Admin logged in from IP ${ip}`
+    details: `Admin logged in (passwordless) from IP ${ip}`
   });
   saveDatabase(db);
 
@@ -260,36 +235,25 @@ app.post('/api/auth/login', (req, res) => {
     success: true,
     token,
     user: {
-      id: db.admin.id,
-      username: db.admin.username,
-      email: db.admin.email,
-      role: db.admin.role,
-      lastLogin: db.admin.lastLogin
+      id: sessionData.id,
+      username: sessionData.username,
+      email: sessionData.email,
+      role: 'super_admin',
+      lastLogin: new Date().toISOString()
     }
   });
 });
 
 app.get('/api/auth/me', (req, res) => {
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.json({ authenticated: false });
-  }
-  const token = authHeader.split(' ')[1];
-  const session = activeSessions.get(token);
-  if (!session || session.expiresAt < Date.now()) {
-    if (session) activeSessions.delete(token);
-    return res.json({ authenticated: false });
-  }
-
   const db = getDatabase();
   res.json({
     authenticated: true,
     user: {
-      id: db.admin.id,
-      username: db.admin.username,
-      email: db.admin.email,
-      role: db.admin.role,
-      lastLogin: db.admin.lastLogin
+      id: db.admin?.id || 'admin-1',
+      username: db.admin?.username || 'admin',
+      email: db.admin?.email || 'admin',
+      role: 'super_admin',
+      lastLogin: db.admin?.lastLogin || new Date().toISOString()
     }
   });
 });
@@ -558,7 +522,7 @@ app.post('/api/apps', requireAdmin, (req, res) => {
     id,
     slug,
     name: data.name.trim(),
-    iconUrl: data.iconUrl || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&auto=format&fit=crop&q=80',
+    iconUrl: data.iconUrl || '',
     apkFileUrl: data.apkFileUrl || `/uploads/${slug}-v1.0.apk`,
     apkFileName: data.apkFileName || `${slug}-v1.0.apk`,
     apkFileSize: data.apkFileSize || '15.0 MB',
@@ -568,7 +532,7 @@ app.post('/api/apps', requireAdmin, (req, res) => {
     androidRequirement: data.androidRequirement || 'Android 7.0 and up',
     developerName: data.developerName || 'Bashar Digital Studios',
     developerWebsite: data.developerWebsite || '',
-    developerEmail: data.developerEmail || 'basharmotivationbangla@gmail.com',
+    developerEmail: data.developerEmail || '',
     developerLogo: data.developerLogo || '',
     categoryId: data.categoryId || (db.categories[0]?.id || 'cat-1'),
     categoryName: data.categoryName || (db.categories.find(c => c.id === data.categoryId)?.name || 'Tools & Utilities'),
@@ -579,9 +543,7 @@ app.post('/api/apps', requireAdmin, (req, res) => {
     downloadCount: parseInt(data.downloadCount || '0', 10),
     rating: parseFloat(data.rating || '4.8'),
     ratingCount: parseInt(data.ratingCount || '1', 10),
-    screenshots: Array.isArray(data.screenshots) && data.screenshots.length > 0 ? data.screenshots : [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80'
-    ],
+    screenshots: Array.isArray(data.screenshots) ? data.screenshots : [],
     featuredImage: data.featuredImage || '',
     status: data.status || 'published',
     isFeatured: !!data.isFeatured,

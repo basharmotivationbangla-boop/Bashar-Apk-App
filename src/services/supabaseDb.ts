@@ -204,7 +204,7 @@ export const supabaseDb = {
         subject: item.subject,
         message: item.message,
         status: item.status || 'unread',
-        createdAt: new Date(Number(item.timestamp) || Date.now()).toISOString()
+        timestamp: new Date(Number(item.timestamp) || Date.now()).toISOString()
       }));
     } catch (err) {
       logSupabaseError('getContactMessages', 'contact_messages', err);
@@ -350,25 +350,28 @@ export const supabaseDb = {
         slug: app.slug,
         package_name: app.packageName,
         version: app.version,
-        version_code: app.versionCode,
-        category: app.category,
-        developer: app.developer,
-        file_size: app.fileSize,
+        apk_file_url: app.apkFileUrl,
+        apk_file_name: app.apkFileName,
+        apk_file_size: app.apkFileSize,
+        android_requirement: app.androidRequirement,
+        category_id: app.categoryId,
+        category_name: app.categoryName,
+        developer_name: app.developerName,
         icon_url: app.iconUrl,
         short_description: app.shortDescription,
         full_description: app.fullDescription,
-        download_url: app.downloadUrl,
-        mirror_url: app.mirrorUrl || '',
         status: app.status,
         is_featured: Boolean(app.isFeatured),
         is_popular: Boolean(app.isPopular),
         is_new: Boolean(app.isNew),
         rating: app.rating || 5,
+        rating_count: app.ratingCount || 0,
         download_count: app.downloadCount || 0,
         tags: app.tags || [],
         screenshots: app.screenshots || [],
-        changelog: app.changelog || [],
-        sha256: app.sha256 || '',
+        release_date: app.releaseDate,
+        last_updated_date: app.lastUpdatedDate,
+        sha256_checksum: app.sha256Checksum || '',
         updated_at: new Date().toISOString()
       };
 
@@ -400,33 +403,33 @@ export const supabaseDb = {
       const { data, error } = await supabase.from('apps').select('*');
       if (error || !data) return [];
 
-      return data.map((item: any) => ({
+      return data.map((item: any): AppItem => ({
         id: item.id,
         name: item.name,
         slug: item.slug,
-        packageName: item.package_name || item.packageName,
-        version: item.version,
-        versionCode: item.version_code || item.versionCode,
-        category: item.category,
-        developer: item.developer,
-        fileSize: item.file_size || item.fileSize,
-        iconUrl: item.icon_url || item.iconUrl,
-        shortDescription: item.short_description || item.shortDescription,
-        fullDescription: item.full_description || item.fullDescription,
-        downloadUrl: item.download_url || item.downloadUrl,
-        mirrorUrl: item.mirror_url || item.mirrorUrl,
-        status: item.status,
-        isFeatured: item.is_featured ?? item.isFeatured,
-        isPopular: item.is_popular ?? item.isPopular,
-        isNew: item.is_new ?? item.isNew,
-        rating: item.rating,
-        downloadCount: item.download_count ?? item.downloadCount,
-        tags: item.tags || [],
-        screenshots: item.screenshots || [],
-        changelog: item.changelog || [],
-        sha256: item.sha256,
-        createdAt: item.created_at || item.createdAt,
-        updatedAt: item.updated_at || item.updatedAt
+        packageName: item.package_name || item.packageName || '',
+        version: item.version || 'v1.0.0',
+        apkFileUrl: item.apk_file_url || item.apkFileUrl || '',
+        apkFileName: item.apk_file_name || item.apkFileName || `${item.slug || 'app'}.apk`,
+        apkFileSize: item.apk_file_size || item.apkFileSize || '15 MB',
+        androidRequirement: item.android_requirement || item.androidRequirement || 'Android 7.0+',
+        developerName: item.developer_name || item.developerName || 'Bashar Apk Developer',
+        categoryId: item.category_id || item.categoryId || 'tools',
+        categoryName: item.category_name || item.categoryName || 'Tools',
+        iconUrl: item.icon_url || item.iconUrl || '',
+        shortDescription: item.short_description || item.shortDescription || '',
+        fullDescription: item.full_description || item.fullDescription || '',
+        status: item.status || 'published',
+        isFeatured: Boolean(item.is_featured ?? item.isFeatured),
+        isPopular: Boolean(item.is_popular ?? item.isPopular),
+        isNew: Boolean(item.is_new ?? item.isNew),
+        rating: Number(item.rating) || 4.8,
+        ratingCount: Number(item.rating_count) || 12,
+        downloadCount: Number(item.download_count ?? item.downloadCount) || 100,
+        tags: Array.isArray(item.tags) ? item.tags : [],
+        screenshots: Array.isArray(item.screenshots) ? item.screenshots : [],
+        releaseDate: item.release_date || new Date().toISOString().split('T')[0],
+        lastUpdatedDate: item.last_updated_date || new Date().toISOString().split('T')[0]
       }));
     } catch (err) {
       logSupabaseError('getAppsFromSupabase', 'apps', err);

@@ -177,14 +177,14 @@ export const LiveChatWidget: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xs font-bold text-slate-100 flex items-center gap-1.5">
-                  Live Community Chat
+                  Community & Support
                   <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
-                    <Radio className="w-2.5 h-2.5 text-emerald-400 animate-pulse" />
-                    Supabase & Cloud Sync
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Online
                   </span>
                 </h3>
                 <p className="text-[10px] text-slate-400">
-                  Real-time Database Active
+                  Ask questions or request APKs
                 </p>
               </div>
             </div>
@@ -200,16 +200,6 @@ export const LiveChatWidget: React.FC = () => {
             </div>
           </div>
 
-          {/* Firestore connection notice if error */}
-          {firestoreError && (
-            <div className="px-3 py-2 bg-amber-500/10 border-b border-amber-500/20 text-amber-300 text-[11px] flex items-center gap-2">
-              <Info className="w-3.5 h-3.5 shrink-0" />
-              <span className="truncate">
-                Firebase Firestore saving enabled.
-              </span>
-            </div>
-          )}
-
           {/* Messages Feed */}
           <div className="flex-1 overflow-y-auto p-4 space-y-3 text-xs">
             {messages.length === 0 ? (
@@ -218,10 +208,10 @@ export const LiveChatWidget: React.FC = () => {
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <p className="font-semibold text-slate-200 text-xs">
-                  Welcome to Bashar APK Chat!
+                  Welcome to Bashar APK Community!
                 </p>
                 <p className="text-[11px] mt-1 text-slate-400 max-w-[220px]">
-                  Say hello, ask for an Android app, or share your feedback. Everything syncs live with Firebase Firestore.
+                  Say hello, request an Android app, or share your feedback with our team.
                 </p>
 
                 {/* Quick Prompts */}
@@ -327,8 +317,8 @@ export const LiveChatWidget: React.FC = () => {
                 type="text"
                 placeholder={
                   isAuthenticated
-                    ? 'Reply as Admin to community...'
-                    : 'Type a message (saved to Firestore)...'
+                    ? 'Reply as Admin...'
+                    : 'Type a message or request an app...'
                 }
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}

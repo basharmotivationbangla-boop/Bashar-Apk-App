@@ -238,16 +238,24 @@ export const AppsPage: React.FC = () => {
           </>
         ) : (
           <div className="py-20 text-center rounded-2xl border border-slate-800/80 bg-slate-900/30 p-8">
-            <h3 className="text-base font-semibold text-slate-200">{t('noAppsFound')}</h3>
+            <h3 className="text-base font-semibold text-slate-200">
+              {search || selectedCategory !== 'all' || activeFilter !== 'all'
+                ? t('noAppsFound')
+                : 'No APK Applications Uploaded Yet'}
+            </h3>
             <p className="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
-              We couldn't find any APKs matching your active query and category filters.
+              {search || selectedCategory !== 'all' || activeFilter !== 'all'
+                ? 'We couldn\'t find any APKs matching your active query and category filters.'
+                : 'Applications will appear here automatically as soon as they are uploaded via the admin console.'}
             </p>
-            <button
-              onClick={handleClearFilters}
-              className="mt-4 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-colors"
-            >
-              Reset All Filters
-            </button>
+            {search || selectedCategory !== 'all' || activeFilter !== 'all' ? (
+              <button
+                onClick={handleClearFilters}
+                className="mt-4 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-colors"
+              >
+                Reset All Filters
+              </button>
+            ) : null}
           </div>
         )}
       </div>

@@ -24,7 +24,7 @@ export const AdminAppForm: React.FC<AdminAppFormProps> = ({ initialApp, onSaved,
   // Form State
   const [name, setName] = useState(initialApp?.name || '');
   const [slug, setSlug] = useState(initialApp?.slug || '');
-  const [iconUrl, setIconUrl] = useState(initialApp?.iconUrl || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&auto=format&fit=crop&q=80');
+  const [iconUrl, setIconUrl] = useState(initialApp?.iconUrl || '');
   const [apkFileUrl, setApkFileUrl] = useState(initialApp?.apkFileUrl || '');
   const [apkFileName, setApkFileName] = useState(initialApp?.apkFileName || '');
   const [apkFileSize, setApkFileSize] = useState(initialApp?.apkFileSize || '15.0 MB');
@@ -34,7 +34,7 @@ export const AdminAppForm: React.FC<AdminAppFormProps> = ({ initialApp, onSaved,
   const [androidRequirement, setAndroidRequirement] = useState(initialApp?.androidRequirement || 'Android 7.0 and up');
   const [developerName, setDeveloperName] = useState(initialApp?.developerName || 'Bashar Digital Studios');
   const [developerWebsite, setDeveloperWebsite] = useState(initialApp?.developerWebsite || 'https://basharapk.com');
-  const [developerEmail, setDeveloperEmail] = useState(initialApp?.developerEmail || 'basharmotivationbangla@gmail.com');
+  const [developerEmail, setDeveloperEmail] = useState(initialApp?.developerEmail || '');
   const [categoryId, setCategoryId] = useState(initialApp?.categoryId || categories[0]?.id || 'cat-1');
   const [subCategory, setSubCategory] = useState(initialApp?.subCategory || 'Utilities');
   const [packageName, setPackageName] = useState(initialApp?.packageName || 'com.bashar.app');
@@ -45,11 +45,7 @@ export const AdminAppForm: React.FC<AdminAppFormProps> = ({ initialApp, onSaved,
   const [isNew, setIsNew] = useState(initialApp?.isNew ?? true);
   const [tagsInput, setTagsInput] = useState(initialApp?.tags?.join(', ') || 'Android, Utility, Fast');
   const [whatsNew, setWhatsNew] = useState(initialApp?.whatsNew || 'Initial release with performance optimizations.');
-  const [screenshots, setScreenshots] = useState<string[]>(
-    initialApp?.screenshots || [
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80'
-    ]
-  );
+  const [screenshots, setScreenshots] = useState<string[]>(initialApp?.screenshots || []);
   const [seoTitle, setSeoTitle] = useState(initialApp?.seoTitle || '');
   const [seoDescription, setSeoDescription] = useState(initialApp?.seoDescription || '');
   const [seoKeywords, setSeoKeywords] = useState(initialApp?.seoKeywords || '');

@@ -68,7 +68,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ currentTab, onTabChang
               </div>
               <div className="mt-1.5 flex items-center gap-1.5 text-[10px] text-slate-400">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Firestore: bashar-apk-app</span>
+                <span>System Operational</span>
               </div>
             </div>
 

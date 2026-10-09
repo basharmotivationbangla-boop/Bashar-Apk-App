@@ -6,9 +6,6 @@ import { supabaseDb } from '../services/supabaseDb';
 import {
   ShieldCheck,
   Send,
-  Mail,
-  Phone,
-  MapPin,
   CheckCircle2,
   FileText,
   AlertTriangle,
@@ -21,13 +18,27 @@ export const AboutPage: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 sm:py-16 text-slate-300">
-      <div className="pb-8 border-b border-slate-800">
-        <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-100">
-          About {settings.name}
-        </h1>
-        <p className="text-sm text-emerald-400 mt-2 font-medium">
-          {settings.tagline}
-        </p>
+      <div className="pb-8 border-b border-slate-800 flex flex-col md:flex-row items-center md:items-start gap-6">
+        <div className="relative shrink-0">
+          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-40 blur-md" />
+          <img
+            src="/uploads/logo.png"
+            alt={settings.name || 'Bashar Apk App'}
+            className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover bg-slate-900 border border-slate-700/80 shadow-2xl"
+          />
+        </div>
+        <div className="text-center md:text-left">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-2">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Official Verified Android Hub</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-100">
+            About {settings.name}
+          </h1>
+          <p className="text-sm text-emerald-400 mt-2 font-medium">
+            {settings.tagline}
+          </p>
+        </div>
       </div>
 
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-slate-300">
@@ -83,182 +94,38 @@ export const AboutPage: React.FC = () => {
 };
 
 export const ContactPage: React.FC = () => {
-  const { settings, t, showToast } = useApp();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      showToast('Please fill out all required fields.', 'error');
-      return;
-    }
-
-    setIsSubmitting(true);
-    try {
-      const contactPayload = {
-        name: name.trim(),
-        email: email.trim(),
-        subject: subject.trim(),
-        message: message.trim()
-      };
-
-      // 1. Save to Supabase database
-      await supabaseDb.saveContactMessage(contactPayload).catch((sbErr) => {
-        console.warn('Supabase save note:', sbErr);
-      });
-
-      // 2. Save to Firebase Firestore database
-      await firebaseDb.saveContactMessage(contactPayload).catch((firebaseErr) => {
-        console.warn('Firebase save note:', firebaseErr);
-      });
-
-      // 3. Also forward to API server
-      await api.sendContactMessage(contactPayload).catch(() => {});
-
-      setSubmitted(true);
-      showToast(t('messageSent'), 'success');
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-    } catch (err: any) {
-      showToast(err.message || 'Failed to send message', 'error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const { settings, navigate } = useApp();
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 sm:py-16">
-      <div className="text-center max-w-2xl mx-auto pb-10">
-        <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-slate-100">
-          {t('contactUs')}
+    <div className="max-w-2xl mx-auto px-4 py-16 sm:py-24 text-center space-y-6">
+      <div className="mx-auto w-36 h-36 rounded-3xl overflow-hidden ring-2 ring-emerald-500/40 shadow-2xl bg-slate-900 flex items-center justify-center">
+        <img
+          src="/uploads/logo.png"
+          alt={settings.name || 'Bashar Apk App'}
+          className="w-full h-full object-cover select-none"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <h1 className="text-3xl font-extrabold font-display text-slate-100">
+          {settings.name || 'Bashar Apk App'}
         </h1>
-        <p className="text-xs sm:text-sm text-slate-400 mt-2">
-          Have an inquiry, application submission request, or technical feedback? Get in touch with the Bashar Apk App team.
+        <p className="text-sm text-emerald-400 font-medium">
+          {settings.tagline || 'Trusted Android Apps, Tools & Digital Solutions'}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Contact Info Column */}
-        <div className="space-y-4">
-          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-            <h3 className="text-sm font-bold text-slate-100">Direct Inquiries</h3>
-            <div className="space-y-3 text-xs text-slate-300">
-              {settings.contactEmail && (
-                <div className="flex items-start gap-3">
-                  <Mail className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block text-slate-500">Email</span>
-                    <a href={`mailto:${settings.contactEmail}`} className="hover:text-emerald-400">
-                      {settings.contactEmail}
-                    </a>
-                  </div>
-                </div>
-              )}
-              {settings.contactPhone && (
-                <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block text-slate-500">Phone</span>
-                    <span>{settings.contactPhone}</span>
-                  </div>
-                </div>
-              )}
-              {settings.contactAddress && (
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-violet-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block text-slate-500">Office</span>
-                    <span>{settings.contactAddress}</span>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+      <p className="text-xs sm:text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
+        অফিসিয়াল অ্যান্ড্রয়েড অ্যাপ্লিকেশন প্ল্যাটফর্ম। সকল অ্যাপস ও ইউটিলিটি সরাসরি প্ল্যাটফর্ম থেকেই ভেরিফাইড ভাবে ডাউনলোড ও অ্যাক্সেসযোগ্য।
+      </p>
 
-          <div className="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 text-xs text-slate-400">
-            <h4 className="font-semibold text-slate-200 mb-1">Developer Submissions</h4>
-            <p>
-              Developers looking to list Android utilities on Bashar Apk App can submit their package details and original APK for verification.
-            </p>
-          </div>
-        </div>
-
-        {/* Contact Form Column */}
-        <div className="md:col-span-2">
-          <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-            {submitted && (
-              <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>{t('messageSent')}</span>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">{t('name')} *</label>
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500"
-                  placeholder="Your Name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-slate-300 mb-1">{t('email')} *</label>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500"
-                  placeholder="email@example.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">{t('subject')}</label>
-              <input
-                type="text"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500"
-                placeholder="Subject or App Name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">{t('message')} *</label>
-              <textarea
-                required
-                rows={5}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-700/80 rounded-xl p-3.5 text-xs text-slate-100 focus:outline-none focus:border-emerald-500 resize-none"
-                placeholder="How can we assist you?"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-emerald-500/20 disabled:opacity-50"
-            >
-              <Send className="w-3.5 h-3.5" />
-              <span>{isSubmitting ? 'Sending...' : t('sendMessage')}</span>
-            </button>
-          </form>
-        </div>
+      <div className="pt-2">
+        <button
+          onClick={() => navigate('/')}
+          className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition-all shadow-lg shadow-emerald-500/20"
+        >
+          হোমপেজে ফিরে যান
+        </button>
       </div>
     </div>
   );
@@ -308,7 +175,7 @@ export const DmcaPage: React.FC = () => (
       Bashar Apk App is in compliance with 17 U.S.C. 512 and the Digital Millennium Copyright Act (DMCA). It is our policy to respond to any infringement notices and take appropriate actions under the DMCA and other applicable intellectual property laws.
     </p>
     <p>
-      If your copyrighted material has been posted on Bashar Apk App or if links to your copyrighted material are returned through our search engine and you want this material removed, you must provide a written communication detailing your authorization and the specific URLs to <span className="text-emerald-400">basharmotivationbangla@gmail.com</span>.
+      If your copyrighted material has been posted on Bashar Apk App or if links to your copyrighted material are returned through our search engine and you want this material removed, you must provide a written communication detailing your authorization and the specific URLs through our official Contact & DMCA form on this website.
     </p>
   </div>
 );

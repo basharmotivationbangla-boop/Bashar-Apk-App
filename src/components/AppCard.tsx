@@ -32,12 +32,24 @@ export const AppCard: React.FC<AppCardProps> = ({ app, featured = false }) => {
         {/* Top Header: App Icon + Title & Category */}
         <div className="flex items-start gap-3.5">
           <div className="relative shrink-0">
-            <img
-              src={app.iconUrl}
-              alt={app.name}
-              className="w-14 h-14 rounded-2xl object-cover ring-1 ring-slate-800 group-hover:ring-emerald-500/40 transition-transform duration-200 group-hover:scale-105 bg-slate-950"
-              loading="lazy"
-            />
+            {app.iconUrl ? (
+              <img
+                src={app.iconUrl}
+                alt={app.name}
+                className="w-14 h-14 rounded-2xl object-cover ring-1 ring-slate-800 group-hover:ring-emerald-500/40 transition-transform duration-200 group-hover:scale-105 bg-slate-950"
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const fb = e.currentTarget.parentElement?.querySelector('.card-icon-fallback') as HTMLElement;
+                  if (fb) fb.style.display = 'flex';
+                }}
+              />
+            ) : null}
+            <div
+              className={`card-icon-fallback w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 items-center justify-center text-emerald-400 font-bold text-xl ring-1 ring-slate-800 group-hover:ring-emerald-500/40 transition-transform duration-200 group-hover:scale-105 ${app.iconUrl ? 'hidden' : 'flex'}`}
+            >
+              {app.name ? app.name.charAt(0).toUpperCase() : 'A'}
+            </div>
             {app.virusScanned && (
               <div
                 title="100% Virus Scanned & Cryptographically Signed"

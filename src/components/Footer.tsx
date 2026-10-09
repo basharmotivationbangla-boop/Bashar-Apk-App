@@ -3,240 +3,184 @@ import { useApp } from '../context/AppContext';
 import { BrandLogo } from './BrandLogo';
 import {
   ShieldCheck,
-  Zap,
-  Lock,
   Send,
   ExternalLink,
-  Mail,
-  Phone,
-  MapPin
+  Heart,
+  Globe,
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const { settings, categories, navigate, t } = useApp();
+  const { settings, navigate } = useApp();
+
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-800/80 bg-slate-950 text-slate-400 mt-20">
-      {/* Top Value / Trust Proposition Bar */}
-      <div className="border-b border-slate-900/80 bg-slate-900/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-slate-200">100% Virus Scanned</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Every APK undergoes cryptographic verification & multi-engine malware scans.</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
-              <Zap className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-slate-200">High-Speed Direct Mirrors</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Direct multi-channel downloads without throttling or deceptive third-party redirects.</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 shrink-0">
-              <Lock className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-semibold text-slate-200">Pure Clean Binaries</h4>
-              <p className="text-xs text-slate-400 mt-0.5">Original developer signatures preserved with zero adware modifications.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Footer Directory */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand & Description */}
+    <footer className="bg-slate-950 border-t border-slate-900 text-slate-400 text-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
-            <BrandLogo size="lg" />
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              {settings.footerText || settings.description}
+            <div className="flex items-center gap-2.5">
+              <BrandLogo size="md" />
+            </div>
+
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+              {settings.description ||
+                'Your trusted hub for verified, high-performance Android applications, tools, and digital solutions with clean direct access.'}
             </p>
 
-            {/* Contact details */}
-            <div className="space-y-1.5 text-xs text-slate-400 pt-2">
-              {settings.contactEmail && (
-                <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <a href={`mailto:${settings.contactEmail}`} className="hover:text-emerald-400 transition-colors">
-                    {settings.contactEmail}
-                  </a>
-                </div>
-              )}
-              {settings.contactPhone && (
-                <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>{settings.contactPhone}</span>
-                </div>
-              )}
-              {settings.contactAddress && (
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>{settings.contactAddress}</span>
-                </div>
-              )}
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3 pt-2">
-              {settings.socialLinks?.facebook && (
-                <a
-                  href={settings.socialLinks.facebook}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-slate-700 transition-colors text-xs font-semibold"
-                  title="Facebook"
-                >
-                  FB
-                </a>
-              )}
-              {settings.socialLinks?.telegram && (
-                <a
-                  href={settings.socialLinks.telegram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-slate-700 transition-colors text-xs font-semibold"
-                  title="Telegram"
-                >
-                  TG
-                </a>
-              )}
-              {settings.socialLinks?.youtube && (
-                <a
-                  href={settings.socialLinks.youtube}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-slate-700 transition-colors text-xs font-semibold"
-                  title="YouTube"
-                >
-                  YT
-                </a>
-              )}
-              {settings.socialLinks?.twitter && (
-                <a
-                  href={settings.socialLinks.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-slate-700 transition-colors text-xs font-semibold"
-                  title="Twitter / X"
-                >
-                  X
-                </a>
-              )}
+            <div className="pt-2 flex items-center gap-4 text-slate-500">
+              <div className="flex items-center gap-1.5 text-xs text-emerald-400">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Active & Verified Mirrors</span>
+              </div>
             </div>
           </div>
 
-          {/* Quick Navigation */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200 mb-4">Navigation</h4>
+          {/* Quick Links */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200">
+              Explore
+            </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => navigate('/')} className="hover:text-emerald-400 transition-colors">
-                  {t('home')}
+                <button
+                  onClick={() => navigate('/apps')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  All Applications
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate('/apps')} className="hover:text-emerald-400 transition-colors">
-                  {t('apps')}
+                <button
+                  onClick={() => navigate('/apps?filter=popular')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Popular Downloads
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate('/categories')} className="hover:text-emerald-400 transition-colors">
-                  {t('categories')}
+                <button
+                  onClick={() => navigate('/apps?filter=latest')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Latest Updates
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate('/apps?filter=popular')} className="hover:text-emerald-400 transition-colors">
-                  {t('popularApps')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/apps?filter=latest')} className="hover:text-emerald-400 transition-colors">
-                  {t('latestUpdates')}
+                <button
+                  onClick={() => navigate('/categories')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Categories
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Popular Categories */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200 mb-4">{t('categories')}</h4>
+          {/* Support & Legal */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200">
+              Legal & Support
+            </h4>
             <ul className="space-y-2 text-xs">
-              {categories.slice(0, 5).map((cat) => (
-                <li key={cat.id}>
-                  <button
-                    onClick={() => navigate(`/apps?category=${cat.id}`)}
-                    className="hover:text-emerald-400 transition-colors truncate text-left max-w-[150px]"
-                  >
-                    {cat.name}
-                  </button>
-                </li>
-              ))}
+              <li>
+                <button
+                  onClick={() => navigate('/about')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Contact Support
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate('/privacy')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate('/terms')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate('/dmca')}
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  DMCA Compliance
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* Trust & Legal */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200 mb-4">{t('legal')}</h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <button onClick={() => navigate('/about')} className="hover:text-emerald-400 transition-colors">
-                  {t('about')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/contact')} className="hover:text-emerald-400 transition-colors">
-                  {t('contactUs')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/privacy')} className="hover:text-emerald-400 transition-colors">
-                  {t('privacyPolicy')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/terms')} className="hover:text-emerald-400 transition-colors">
-                  {t('termsConditions')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/dmca')} className="hover:text-emerald-400 transition-colors">
-                  {t('dmca')}
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/disclaimer')} className="hover:text-emerald-400 transition-colors">
-                  {t('disclaimer')}
-                </button>
-              </li>
-            </ul>
+          {/* Community & Contact */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200">
+              Support & Inquiries
+            </h4>
+            <div className="space-y-2 text-xs text-slate-400">
+              <p className="flex items-center gap-2">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <span>Verified Android Store</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Direct Helpdesk & Requests</span>
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <button
+                onClick={() => navigate('/apps')}
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-medium transition-colors"
+              >
+                <span>Explore Apps</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <div>
-            {settings.footerText || `© 2026 ${settings.name || 'Bashar Apk App'}. All rights reserved.`}
-          </div>
+        <div className="mt-12 pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>
+            © {currentYear} {settings.name || 'Bashar Apk App'}. All rights reserved.
+          </p>
 
-          <div className="flex items-center gap-4">
-            <a href="/sitemap.xml" target="_blank" className="hover:text-slate-400 flex items-center gap-1">
-              Sitemap <ExternalLink className="w-3 h-3" />
-            </a>
+          <div className="flex items-center gap-6">
             <button
-              onClick={() => navigate('/admin')}
-              className="text-slate-500 hover:text-emerald-400 transition-colors"
+              onClick={() => navigate('/privacy')}
+              className="hover:text-slate-300 transition-colors"
             >
-              Portal
+              Privacy
+            </button>
+            <button
+              onClick={() => navigate('/terms')}
+              className="hover:text-slate-300 transition-colors"
+            >
+              Terms
+            </button>
+            <button
+              onClick={() => navigate('/disclaimer')}
+              className="hover:text-slate-300 transition-colors"
+            >
+              Disclaimer
             </button>
           </div>
         </div>

@@ -50,8 +50,8 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
 }
 
 export const api = {
-  // --- Auth ---
-  async login(password: string): Promise<{ success: boolean; token: string; user: AdminUser }> {
+  // --- Auth (Passwordless Admin Enabled) ---
+  async login(password: string = ''): Promise<{ success: boolean; token: string; user: AdminUser }> {
     const res = await request<{ success: boolean; token: string; user: AdminUser }>('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ password })
