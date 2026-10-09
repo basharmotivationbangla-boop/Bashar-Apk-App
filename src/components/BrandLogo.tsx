@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import defaultLogo from '../assets/images/bashar_apk_official_logo_1791554816506.jpg';
+import defaultLogo from '../assets/images/bashar_apk_pro_logo_1791555288229.jpg';
 
 interface BrandLogoProps {
   className?: string;

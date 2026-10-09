@@ -15,7 +15,7 @@ import {
   Lock,
   DownloadCloud
 } from 'lucide-react';
-import defaultLogo from '../assets/images/bashar_apk_official_logo_1791554816506.jpg';
+import defaultLogo from '../assets/images/bashar_apk_pro_logo_1791555288229.jpg';
 
 export const HomePage: React.FC = () => {
   const { settings, navigate, t } = useApp();
