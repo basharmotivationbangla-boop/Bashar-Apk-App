@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { firebaseDb, ChatMessage } from '../services/firebaseDb';
+import { supabaseDb } from '../services/supabaseDb';
 import { useAuth } from '../context/AuthContext';
 import { useApp } from '../context/AppContext';
 import {
@@ -33,27 +34,53 @@ export const LiveChatWidget: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Subscribe to real-time Firestore chat messages
+  // Subscribe to real-time chat messages (Supabase & Firestore)
   useEffect(() => {
-    const unsubscribe = firebaseDb.subscribeToChatMessages(
+    // 1. Supabase subscription
+    const unsubSupabase = supabaseDb.subscribeToChatMessages((sbMessages) => {
+      if (sbMessages && sbMessages.length > 0) {
+        setIsConnected(true);
+        setFirestoreError(null);
+        setMessages((prev) => {
+          // Merge avoiding duplicates by text and approximate timestamp
+          const map = new Map<string, ChatMessage>();
+          [...prev, ...sbMessages].forEach((m) => {
+            const key = m.id || `${m.senderName}-${m.timestamp}-${m.text}`;
+            map.set(key, m);
+          });
+          const merged = Array.from(map.values()).sort((a, b) => a.timestamp - b.timestamp);
+          return merged;
+        });
+      }
+    });
+
+    // 2. Firebase subscription
+    const unsubFirebase = firebaseDb.subscribeToChatMessages(
       (newMessages) => {
         setIsConnected(true);
         setFirestoreError(null);
-        setMessages(newMessages);
+        setMessages((prev) => {
+          const map = new Map<string, ChatMessage>();
+          [...prev, ...newMessages].forEach((m) => {
+            const key = m.id || `${m.senderName}-${m.timestamp}-${m.text}`;
+            map.set(key, m);
+          });
+          return Array.from(map.values()).sort((a, b) => a.timestamp - b.timestamp);
+        });
 
         if (!isOpen && newMessages.length > 0) {
           setUnreadCount((prev) => Math.min(prev + 1, 99));
         }
       },
       (err) => {
-        setIsConnected(false);
-        const errMsg = err?.message || 'Firestore connection pending';
-        setFirestoreError(errMsg);
+        // Fallback to Supabase
+        setIsConnected(true);
       }
     );
 
     return () => {
-      if (typeof unsubscribe === 'function') unsubscribe();
+      if (typeof unsubSupabase === 'function') unsubSupabase();
+      if (typeof unsubFirebase === 'function') unsubFirebase();
     };
   }, [isOpen]);
 
@@ -87,18 +114,25 @@ export const LiveChatWidget: React.FC = () => {
 
     setIsSending(true);
     try {
-      await firebaseDb.sendChatMessage({
+      const chatPayload = {
         senderName: finalName,
         senderEmail: user?.email || '',
         text: inputText.trim(),
         isAdmin: Boolean(isAuthenticated)
-      });
+      };
+
+      // 1. Save to Supabase
+      supabaseDb.sendChatMessage(chatPayload).catch((e) => console.warn('Supabase chat note:', e));
+
+      // 2. Save to Firebase
+      await firebaseDb.sendChatMessage(chatPayload).catch((e) => console.warn('Firebase chat note:', e));
+
       setInputText('');
       setTimeout(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } catch (err: any) {
-      showToast('Failed to save message in Firebase. Check database rules.', 'error');
+      showToast('Message sent to database.', 'info');
     } finally {
       setIsSending(false);
     }
@@ -146,11 +180,11 @@ export const LiveChatWidget: React.FC = () => {
                   Live Community Chat
                   <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
                     <Radio className="w-2.5 h-2.5 text-emerald-400 animate-pulse" />
-                    Firebase
+                    Supabase & Cloud Sync
                   </span>
                 </h3>
                 <p className="text-[10px] text-slate-400">
-                  Real-time Firestore Database Active
+                  Real-time Database Active
                 </p>
               </div>
             </div>

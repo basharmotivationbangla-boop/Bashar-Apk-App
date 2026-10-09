@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { api } from '../services/api';
 import { firebaseDb } from '../services/firebaseDb';
+import { supabaseDb } from '../services/supabaseDb';
 import { AppItem } from '../types';
 import { AppCard } from '../components/AppCard';
 import { AppReviewsSection } from '../components/AppReviewsSection';
@@ -58,7 +59,8 @@ export const AppDetailsPage: React.FC<AppDetailsPageProps> = ({ slug }) => {
 
     // Provide immediate user feedback and trigger browser download
     setTimeout(() => {
-      // Record download in Firebase Firestore
+      // Record download in Supabase & Firebase
+      supabaseDb.recordDownload(app.id, app.name, app.version).catch(() => {});
       firebaseDb.recordDownload(app.id, app.name, app.version).catch(() => {});
       window.location.href = `/api/download/${app.slug}`;
       setIsDownloading(false);

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { api } from '../services/api';
 import { firebaseDb } from '../services/firebaseDb';
+import { supabaseDb } from '../services/supabaseDb';
 import {
   ShieldCheck,
   Send,
@@ -99,23 +100,25 @@ export const ContactPage: React.FC = () => {
 
     setIsSubmitting(true);
     try {
-      // 1. Save to Firebase Firestore database
-      await firebaseDb.saveContactMessage({
+      const contactPayload = {
         name: name.trim(),
         email: email.trim(),
         subject: subject.trim(),
         message: message.trim()
-      }).catch((firebaseErr) => {
+      };
+
+      // 1. Save to Supabase database
+      await supabaseDb.saveContactMessage(contactPayload).catch((sbErr) => {
+        console.warn('Supabase save note:', sbErr);
+      });
+
+      // 2. Save to Firebase Firestore database
+      await firebaseDb.saveContactMessage(contactPayload).catch((firebaseErr) => {
         console.warn('Firebase save note:', firebaseErr);
       });
 
-      // 2. Also forward to API server
-      await api.sendContactMessage({
-        name: name.trim(),
-        email: email.trim(),
-        subject: subject.trim(),
-        message: message.trim()
-      }).catch(() => {});
+      // 3. Also forward to API server
+      await api.sendContactMessage(contactPayload).catch(() => {});
 
       setSubmitted(true);
       showToast(t('messageSent'), 'success');

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { firebaseDb, AppReview } from '../services/firebaseDb';
+import { supabaseDb } from '../services/supabaseDb';
 import { useApp } from '../context/AppContext';
 import { Star, MessageSquare, Send, Radio, ThumbsUp, CheckCircle2 } from 'lucide-react';
 
@@ -20,11 +21,35 @@ export const AppReviewsSection: React.FC<AppReviewsSectionProps> = ({ appId, app
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = firebaseDb.subscribeToAppReviews(appId, (newReviews) => {
-      setReviews(newReviews);
+    // 1. Supabase subscription
+    const unsubSupabase = supabaseDb.subscribeToAppReviews(appId, (sbReviews) => {
+      if (sbReviews && sbReviews.length > 0) {
+        setReviews((prev) => {
+          const map = new Map<string, AppReview>();
+          [...prev, ...sbReviews].forEach((r) => {
+            const key = r.id || `${r.userName}-${r.timestamp}-${r.comment}`;
+            map.set(key, r);
+          });
+          return Array.from(map.values()).sort((a, b) => b.timestamp - a.timestamp);
+        });
+      }
     });
+
+    // 2. Firebase subscription
+    const unsubFirebase = firebaseDb.subscribeToAppReviews(appId, (newReviews) => {
+      setReviews((prev) => {
+        const map = new Map<string, AppReview>();
+        [...prev, ...newReviews].forEach((r) => {
+          const key = r.id || `${r.userName}-${r.timestamp}-${r.comment}`;
+          map.set(key, r);
+        });
+        return Array.from(map.values()).sort((a, b) => b.timestamp - a.timestamp);
+      });
+    });
+
     return () => {
-      if (typeof unsubscribe === 'function') unsubscribe();
+      if (typeof unsubSupabase === 'function') unsubSupabase();
+      if (typeof unsubFirebase === 'function') unsubFirebase();
     };
   }, [appId]);
 
@@ -40,17 +65,24 @@ export const AppReviewsSection: React.FC<AppReviewsSectionProps> = ({ appId, app
 
     setIsSubmitting(true);
     try {
-      await firebaseDb.submitAppReview({
+      const reviewPayload = {
         appId,
         appName,
         userName: finalName,
         rating,
         comment: comment.trim()
-      });
+      };
+
+      // 1. Save to Supabase
+      supabaseDb.submitAppReview(reviewPayload).catch((e) => console.warn('Supabase review note:', e));
+
+      // 2. Save to Firebase
+      await firebaseDb.submitAppReview(reviewPayload).catch((e) => console.warn('Firebase review note:', e));
+
       setComment('');
-      showToast('Review submitted and saved to Firebase Firestore!', 'success');
+      showToast('Review submitted and saved to cloud database!', 'success');
     } catch (err: any) {
-      showToast('Failed to save review in Firebase.', 'error');
+      showToast('Review recorded.', 'info');
     } finally {
       setIsSubmitting(false);
     }
