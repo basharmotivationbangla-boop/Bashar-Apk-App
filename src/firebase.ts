@@ -1,29 +1,47 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics, isSupported } from 'firebase/analytics';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, doc, getDocFromServer } from 'firebase/firestore';
+import firebaseAppletConfig from '../firebase-applet-config.json';
 
-// Web app's Firebase configuration provided by the user
+// Web app's Firebase configuration provisioned for this application
 export const firebaseConfig = {
-  apiKey: "AIzaSyC7kGu8gmJr421mHu6a7hytRiyGPUijWlI",
-  authDomain: "bashar-apk-app.firebaseapp.com",
-  projectId: "bashar-apk-app",
-  storageBucket: "bashar-apk-app.firebasestorage.app",
-  messagingSenderId: "796027885406",
-  appId: "1:796027885406:web:772a852ea6c3e5cc90a1cf",
-  measurementId: "G-V0D0FEE4PC"
+  apiKey: firebaseAppletConfig.apiKey,
+  authDomain: firebaseAppletConfig.authDomain,
+  projectId: firebaseAppletConfig.projectId,
+  storageBucket: firebaseAppletConfig.storageBucket,
+  messagingSenderId: firebaseAppletConfig.messagingSenderId,
+  appId: firebaseAppletConfig.appId,
+  measurementId: firebaseAppletConfig.measurementId || "G-V0D0FEE4PC"
 };
 
-// Initialize Firebase App & Firestore
+// Initialize Firebase App
 export const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
 
-// Initialize Analytics if supported in the browser
+// Initialize Firestore with specific database ID if provisioned, else default
+export const db = firebaseAppletConfig.firestoreDatabaseId
+  ? getFirestore(app, firebaseAppletConfig.firestoreDatabaseId)
+  : getFirestore(app);
+
+// Connection test on application boot as required by Firestore integration guidelines
+export async function testConnection() {
+  try {
+    await getDocFromServer(doc(db, 'test', 'connection'));
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('the client is offline')) {
+      console.warn("Please check your Firebase configuration: client is offline.");
+    }
+  }
+}
+
 if (typeof window !== 'undefined') {
+  testConnection();
+
   isSupported().then((supported) => {
-    if (supported) {
+    if (supported && firebaseConfig.measurementId) {
       getAnalytics(app);
     }
   }).catch(() => {
     // Analytics optional fallback
   });
 }
+
