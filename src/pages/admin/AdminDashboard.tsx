@@ -15,9 +15,9 @@ export const AdminDashboard: React.FC = () => {
 
   React.useEffect(() => {
     if (!isLoading && !isAuthenticated) {
-      login();
+      navigate('/admin/login');
     }
-  }, [isLoading, isAuthenticated, login]);
+  }, [isLoading, isAuthenticated, navigate]);
 
   if (isLoading) {
     return (

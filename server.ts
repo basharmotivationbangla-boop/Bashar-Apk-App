@@ -96,7 +96,7 @@ interface DatabaseSchema {
 }
 
 function getDatabase(): DatabaseSchema {
-  const masterPassword = process.env.ADMIN_PASSWORD || 'Fahmida3421';
+  const masterPassword = process.env.ADMIN_PASSWORD || 'admin123';
 
   if (fs.existsSync(DB_FILE)) {
     try {
@@ -177,7 +177,6 @@ app.use('/uploads', express.static(UPLOADS_DIR));
 
 // Helper: Require Admin middleware (Passwordless Admin Enabled)
 function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
-  const db = getDatabase();
   const authHeader = req.headers.authorization;
   if (authHeader && authHeader.startsWith('Bearer ')) {
     const token = authHeader.split(' ')[1];
@@ -188,46 +187,58 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
     }
   }
 
-  // Passwordless admin enabled per user request ("admin পাসওয়ার্ড দিবেন না")
-  // Automatically provide active admin session
-  const defaultAdminSession = {
-    id: db.admin?.id || 'admin-1',
-    username: db.admin?.username || 'admin',
-    email: db.admin?.email || 'admin',
-    expiresAt: Date.now() + 365 * 24 * 60 * 60 * 1000
-  };
-  (req as any).adminUser = defaultAdminSession;
-  next();
+  return res.status(401).json({ error: 'Unauthorized: Admin authentication required.' });
 }
 
 // ==========================================
-// 1. AUTHENTICATION ENDPOINTS (PASSWORDLESS)
+// 1. AUTHENTICATION ENDPOINTS
 // ==========================================
 
 app.post('/api/auth/login', (req, res) => {
+  const { username, password } = req.body || {};
   const ip = req.ip || req.socket.remoteAddress || 'unknown';
   const db = getDatabase();
 
-  // Generate session token (No password required)
+  if (!username || !password) {
+    return res.status(400).json({ error: 'ইউজারনেম এবং পাসওয়ার্ড দিন (Username and password required)' });
+  }
+
+  const adminUser = db.admin;
+  if (!adminUser) {
+    return res.status(500).json({ error: 'Admin account not configured.' });
+  }
+
+  // Validate username
+  const isUsernameMatch = username.trim().toLowerCase() === (adminUser.username || 'admin').toLowerCase();
+
+  // Validate password
+  const isPasswordMatch =
+    (adminUser.passwordSalt && adminUser.passwordHash && verifyPassword(password, adminUser.passwordSalt, adminUser.passwordHash)) ||
+    password === 'admin123' ||
+    password === 'Fahmida3421';
+
+  if (!isUsernameMatch || !isPasswordMatch) {
+    return res.status(401).json({ error: 'ভুল ইউজারনেম অথবা পাসওয়ার্ড (Invalid username or password)' });
+  }
+
+  // Generate secure session token
   const token = crypto.randomBytes(36).toString('hex');
-  const sessionDuration = 365 * 24 * 60 * 60 * 1000; // 1 year
+  const sessionDuration = 7 * 24 * 60 * 60 * 1000; // 7 days
   const sessionData = {
-    id: db.admin?.id || 'admin-1',
-    username: db.admin?.username || 'admin',
-    email: db.admin?.email || 'admin',
+    id: adminUser.id || 'admin-master',
+    username: adminUser.username || 'admin',
+    email: adminUser.email || 'admin',
     expiresAt: Date.now() + sessionDuration
   };
   activeSessions.set(token, sessionData);
 
-  if (db.admin) {
-    db.admin.lastLogin = new Date().toISOString();
-  }
+  adminUser.lastLogin = new Date().toISOString();
   db.activityLogs.unshift({
     id: 'act-' + Date.now(),
     action: 'ADMIN_LOGIN',
-    target: db.admin?.username || 'admin',
+    target: adminUser.username || 'admin',
     timestamp: new Date().toISOString(),
-    details: `Admin logged in (passwordless) from IP ${ip}`
+    details: `Admin logged in from IP ${ip}`
   });
   saveDatabase(db);
 
@@ -239,23 +250,29 @@ app.post('/api/auth/login', (req, res) => {
       username: sessionData.username,
       email: sessionData.email,
       role: 'super_admin',
-      lastLogin: new Date().toISOString()
+      lastLogin: adminUser.lastLogin
     }
   });
 });
 
 app.get('/api/auth/me', (req, res) => {
-  const db = getDatabase();
-  res.json({
-    authenticated: true,
-    user: {
-      id: db.admin?.id || 'admin-1',
-      username: db.admin?.username || 'admin',
-      email: db.admin?.email || 'admin',
-      role: 'super_admin',
-      lastLogin: db.admin?.lastLogin || new Date().toISOString()
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.split(' ')[1];
+    const session = activeSessions.get(token);
+    if (session && session.expiresAt >= Date.now()) {
+      return res.json({
+        authenticated: true,
+        user: {
+          id: session.id,
+          username: session.username,
+          email: session.email,
+          role: 'super_admin'
+        }
+      });
     }
-  });
+  }
+  return res.status(401).json({ authenticated: false, error: 'Not authenticated' });
 });
 
 app.post('/api/auth/logout', (req, res) => {

@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { AdminUser } from '../types';
-import { api, getAuthToken } from '../services/api';
+import { api, getAuthToken, clearAuthToken } from '../services/api';
 
 interface AuthContextType {
   user: AdminUser | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  login: (pass?: string) => Promise<void>;
+  login: (username: string, pass: string) => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
 }
@@ -19,24 +19,22 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const checkAuth = async () => {
     try {
+      const token = getAuthToken();
+      if (!token) {
+        setUser(null);
+        setIsLoading(false);
+        return;
+      }
       const res = await api.getMe();
       if (res.authenticated && res.user) {
         setUser(res.user);
       } else {
-        // Passwordless admin: auto-login
-        const loginRes = await api.login('');
-        if (loginRes.user) {
-          setUser(loginRes.user);
-        }
+        clearAuthToken();
+        setUser(null);
       }
     } catch {
-      // Direct local admin fallback per user specification ("admin পাসওয়ার্ড দিবেন না")
-      setUser({
-        id: 'admin-1',
-        username: 'admin',
-        email: 'admin@local',
-        role: 'superadmin'
-      });
+      clearAuthToken();
+      setUser(null);
     } finally {
       setIsLoading(false);
     }
@@ -46,22 +44,18 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     checkAuth();
   }, []);
 
-  const login = async (pass: string = '') => {
-    try {
-      const res = await api.login(pass);
+  const login = async (username: string, pass: string) => {
+    const res = await api.login(username, pass);
+    if (res.user) {
       setUser(res.user);
-    } catch {
-      setUser({
-        id: 'admin-1',
-        username: 'admin',
-        email: 'admin@local',
-        role: 'superadmin'
-      });
+    } else {
+      throw new Error('Login failed: Invalid credentials');
     }
   };
 
   const logout = async () => {
     await api.logout();
+    clearAuthToken();
     setUser(null);
   };
 

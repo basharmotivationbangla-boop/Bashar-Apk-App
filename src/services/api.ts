@@ -14,6 +14,8 @@ export const removeAuthToken = (): void => {
   localStorage.removeItem(TOKEN_KEY);
 };
 
+export const clearAuthToken = removeAuthToken;
+
 const getHeaders = (extra: HeadersInit = {}): HeadersInit => {
   const token = getAuthToken();
   const headers: Record<string, string> = {
@@ -50,11 +52,11 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
 }
 
 export const api = {
-  // --- Auth (Passwordless Admin Enabled) ---
-  async login(password: string = ''): Promise<{ success: boolean; token: string; user: AdminUser }> {
+  // --- Auth (Admin Login with Username & Password) ---
+  async login(username: string, password: string): Promise<{ success: boolean; token: string; user: AdminUser }> {
     const res = await request<{ success: boolean; token: string; user: AdminUser }>('/api/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ password })
+      body: JSON.stringify({ username, password })
     });
     if (res.token) {
       setAuthToken(res.token);

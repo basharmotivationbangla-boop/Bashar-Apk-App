@@ -3,10 +3,10 @@
     "id": "admin-master",
     "username": "admin",
     "email": "admin",
-    "passwordHash": "6ad25ba205f1d851f3e6821b26008a84cf74cad0e7afb837ba0cea83e4851396794bc4ed7bb8ff46b27ce8e073cd82a456ea110a68c31dc5e026e0f38a7c88dc",
-    "passwordSalt": "35c595b75d36e5ceb085825805f7a0cb",
+    "passwordHash": "11d595f4605557bf3886c23bd51056398816adaf7ade68ac4ad6a862e321dcb0bd234ed494f950c9374c50dd9808dffa959c455b8e408cf7880114950de96ed2",
+    "passwordSalt": "4aa6077a7966ce37b8adec2a8cdfac36",
     "role": "superadmin",
-    "lastLogin": "2026-10-08T09:37:44.283Z"
+    "lastLogin": "2026-10-13T16:14:45.689Z"
   },
   "settings": {
     "name": "Bashar Apk App",
@@ -552,6 +552,20 @@
     }
   ],
   "activityLogs": [
+    {
+      "id": "act-1791908085690",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-13T16:14:45.690Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
+    {
+      "id": "act-1791907951243",
+      "action": "ADMIN_LOGIN",
+      "target": "admin",
+      "timestamp": "2026-10-13T16:12:31.243Z",
+      "details": "Admin logged in from IP 127.0.0.1"
+    },
     {
       "id": "act-1791452264345",
       "action": "APP_DELETED",
