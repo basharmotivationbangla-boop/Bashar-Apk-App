@@ -46,7 +46,7 @@
       "description": "Essential system utilities, boosters, clean and efficient Android tools.",
       "icon": "Wrench",
       "color": "#10b981",
-      "appCount": 0
+      "appCount": 2
     },
     {
       "id": "cat-2",
@@ -55,7 +55,7 @@
       "description": "Notes, office tools, task managers, and workflow accelerators.",
       "icon": "CheckSquare",
       "color": "#06b6d4",
-      "appCount": 0
+      "appCount": 2
     },
     {
       "id": "cat-3",
@@ -64,7 +64,7 @@
       "description": "Video downloaders, high-definition players, and audio engines.",
       "icon": "Video",
       "color": "#8b5cf6",
-      "appCount": 0
+      "appCount": 1
     },
     {
       "id": "cat-4",
@@ -73,7 +73,7 @@
       "description": "Shield your identity with encrypted proxies, antivirus, and vaults.",
       "icon": "ShieldCheck",
       "color": "#f59e0b",
-      "appCount": 0
+      "appCount": 1
     },
     {
       "id": "cat-5",
@@ -82,7 +82,7 @@
       "description": "Islamic studies, languages, exam preps, and skill learning apps.",
       "icon": "BookOpen",
       "color": "#3b82f6",
-      "appCount": 0
+      "appCount": 1
     },
     {
       "id": "cat-6",
@@ -91,7 +91,7 @@
       "description": "Ultra-fast messaging, Bangla typing keyboards, and voice chats.",
       "icon": "MessageCircle",
       "color": "#ec4899",
-      "appCount": 0
+      "appCount": 1
     },
     {
       "id": "cat-7",
@@ -100,10 +100,445 @@
       "description": "Streamlined entertainment, casual offline games, and streamers.",
       "icon": "Gamepad2",
       "color": "#ef4444",
-      "appCount": 0
+      "appCount": 1
     }
   ],
-  "apps": [],
+  "apps": [
+    {
+      "id": "app-101",
+      "slug": "bangla-smart-keyboard",
+      "name": "Bangla Smart Keyboard Pro",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310b981%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23047857%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Crect%20width%3D%2280%22%20height%3D%2252%22%20rx%3D%2210%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Crect%20x%3D%2210%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2226%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2242%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2258%22%20y%3D%2210%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2216%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2232%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2248%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2210%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2224%22%20y%3D%2238%22%20width%3D%2232%22%20height%3D%228%22%20rx%3D%223%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Ctext%20x%3D%2240%22%20y%3D%2275%22%20fill%3D%22%23ffffff%22%20font-weight%3D%22900%22%20font-size%3D%2222%22%20text-anchor%3D%22middle%22%3E%E0%A6%95%3C%2Ftext%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "bangla-smart-keyboard-v3.2.0.apk",
+      "apkFileSize": "16.4 MB",
+      "shortDescription": "দ্রুততম বাংলা টাইপিং কিবোর্ড, অফলাইন ভয়েস টাইপিং ও প্রিমিয়াম ফন্টসহ আধুনিক অ্যাপ।",
+      "fullDescription": "Bangla Smart Keyboard Pro হলো বাংলাদেশের অ্যান্ড্রয়েড ব্যবহারকারীদের জন্য তৈরি একটি অত্যাধুনিক এবং বিদ্যুৎগতির বাংলা টাইপিং কিবোর্ড। এতে রয়েছে অভ্র স্টাইল ফোনেটিক টাইপিং, ট্র্যাডিশনাল প্রভাত ও বিজয় কিবোর্ড লেআউট, অফলাইন ভয়েস-টু-টেক্সট কনভার্টার এবং হাজারেরও বেশি ইমোজি। সম্পূর্ণ বিজ্ঞাপনমুক্ত এবং ব্যাটারি-বান্ধব এই অ্যাপটি আপনার স্মার্টফোনে দ্রুত টাইপিং নিশ্চিত করে।",
+      "version": "v3.2.0",
+      "androidRequirement": "Android 6.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-6",
+      "categoryName": "Communication & Social",
+      "subCategory": "Keyboards & Input",
+      "packageName": "com.bashar.banglasmartkeyboard",
+      "releaseDate": "2026-09-15",
+      "lastUpdatedDate": "2026-10-10",
+      "downloadCount": 428500,
+      "rating": 4.9,
+      "ratingCount": 18420,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23047857%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23064e3b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EBangla%20Typing%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EPhonetic%20%26%20Voice%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23065f46%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23022c22%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EThemes%20%26%20Emojis%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3ECustom%20Layouts%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isPopular": true,
+      "isNew": false,
+      "tags": [
+        "Bangla",
+        "Keyboard",
+        "Voice Typing",
+        "Communication",
+        "Android Tools"
+      ],
+      "features": [
+        "অফলাইন বাংলা ভয়েস টাইপিং সুবিধা",
+        "স্মার্ট অটো-কারেকশন ও শব্দ সাজেশন",
+        "অভ্র ও প্রভাত লেআউট সাপোর্ট",
+        "লাইট ও ডার্ক প্রফেশনাল থিম",
+        "১০০% নিরাপদ ও কি-লগার মুক্ত"
+      ],
+      "whatsNew": "নতুন বাংলা হস্তলিপি ও ভয়েস রেকগনিশন ২.০ আপডেট করা হয়েছে। মেমোরি খরচ ৪০% কমানো হয়েছে।",
+      "sha256Checksum": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "virusScanned": true
+    },
+    {
+      "id": "app-102",
+      "slug": "ultra-hd-video-downloader-pro",
+      "name": "Ultra HD Video Downloader Pro",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%238b5cf6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%234c1d95%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2236%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%2232%2C24%2058%2C40%2032%2C56%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M40%2C58%20L40%2C78%20M30%2C68%20L40%2C78%20L50%2C68%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "ultra-hd-video-downloader-v4.1.5.apk",
+      "apkFileSize": "22.8 MB",
+      "shortDescription": "সকল সোশ্যাল মিডিয়া ও ওয়েবসাইট থেকে ৪K আল্ট্রা এইচডি ভিডিও দ্রুত ডাউনলোড করুন।",
+      "fullDescription": "Ultra HD Video Downloader Pro দিয়ে যেকোনো ওয়েবসাইট, সোশ্যাল মিডিয়া এবং ভিডিও শেয়ারিং প্ল্যাটফর্ম থেকে ৪K, ১০৮০p এবং এমপিথ্রি অডিও ফাইলে ভিডিও সরাসরি ডিভাইসে সেভ করুন। এতে রয়েছে মাল্টি-থ্রেডেড এক্সিলারেটর যা সাধারণ ডাউনলোডের চেয়ে ৫ গুণ বেশি গতি দেয়।",
+      "version": "v4.1.5",
+      "androidRequirement": "Android 7.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-3",
+      "categoryName": "Media & Video",
+      "subCategory": "Video Tools",
+      "packageName": "com.bashar.videodownloader",
+      "releaseDate": "2026-08-20",
+      "lastUpdatedDate": "2026-10-12",
+      "downloadCount": 685200,
+      "rating": 4.8,
+      "ratingCount": 29800,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%236d28d9%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%233b0764%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3E4K%20Video%20Download%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EUltra%20Fast%20Engine%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%235b21b6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e1b4b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EAudio%20Converter%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EDirect%20MP3%20Export%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isPopular": true,
+      "isNew": true,
+      "tags": [
+        "Video",
+        "Downloader",
+        "4K",
+        "Media",
+        "MP3"
+      ],
+      "features": [
+        "৪K ও ১০৮০p ফুল রেজোলিউশন ডাউনলোড",
+        "এক ক্লিকে ভিডিও থেকে এমপিথ্রি অডিও কনভার্টার",
+        "ব্যাকগ্রাউন্ড ব্যাচ ডাউনলোড সুবিধা",
+        "বিল্ট-ইন প্রাইভেট ফাইল ভল্ট",
+        "কোনো পপ-আপ বা অপ্রয়োজনীয় বিজ্ঞাপন নেই"
+      ],
+      "whatsNew": "নতুন ব্রাউজার এক্সটেনশন ইঞ্জিন এবং রিলস/শর্টস ডাউনলোডার উন্নত করা হয়েছে।",
+      "sha256Checksum": "f45a782b19283748291038475619283746571829304958671829384756102938",
+      "virusScanned": true
+    },
+    {
+      "id": "app-103",
+      "slug": "ram-booster-cleaner-max",
+      "name": "RAM Booster & Phone Cleaner Max",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2306b6d4%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230e7490%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2236%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M40%2C12%20L50%2C34%20L28%2C42%20L52%2C42%20L30%2C68%20L36%2C46%20L18%2C46%20Z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "ram-booster-cleaner-max-v2.8.2.apk",
+      "apkFileSize": "12.1 MB",
+      "shortDescription": "এক ক্লিকে জাঙ্ক ফাইল পরিষ্কার, র‍্যাম বুস্ট এবং ফোনের পারফরম্যান্স দ্বিগুণ করুন।",
+      "fullDescription": "RAM Booster & Cleaner Max অ্যান্ড্রয়েড ফোনের গতি বৃদ্ধি ও স্টোরেজ পরিষ্কার করার অন্যতম নির্ভরযোগ্য ইউটিলিটি। এটি সিস্টেম ক্যাশ, অব্যবহৃত ফাইল, অবশিষ্ট ডেটা এবং ব্যাকগ্রাউন্ড অ্যাপস নিরাপদভাবে ক্লিয়ার করে ফোনের ব্যাটারি লাইফ বাড়ায় এবং হিটিং সমস্যা দূর করে।",
+      "version": "v2.8.2",
+      "androidRequirement": "Android 6.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-1",
+      "categoryName": "Tools & Utilities",
+      "subCategory": "System Optimization",
+      "packageName": "com.bashar.ramboostercleaner",
+      "releaseDate": "2026-09-01",
+      "lastUpdatedDate": "2026-10-11",
+      "downloadCount": 312000,
+      "rating": 4.7,
+      "ratingCount": 14250,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230e7490%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23155e75%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EOne-Tap%20Boost%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EFree%20Up%20RAM%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230891b2%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23164e63%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EJunk%20Cleaner%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EClear%20Storage%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isPopular": false,
+      "isNew": true,
+      "tags": [
+        "Cleaner",
+        "Booster",
+        "RAM",
+        "Battery",
+        "Utility"
+      ],
+      "features": [
+        "ডিপ ক্যাশ ও ডুপ্লিকেট ফাইল ক্লিনার",
+        "সিপিইউ কুলার ও তাপমাত্রা নিয়ন্ত্রণ",
+        "স্মার্ট ব্যাটারি সেভার মোড",
+        "রিয়েল-টাইম মেমোরি অ্যানালাইজার"
+      ],
+      "whatsNew": "অ্যান্ড্রয়েড ১৪ এবং ১৫ এর জন্য ডিপ ক্লিন অ্যালগরিদম আপডেট।",
+      "sha256Checksum": "8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d2e1f0a9b8c7d",
+      "virusScanned": true
+    },
+    {
+      "id": "app-104",
+      "slug": "quran-bangla-prayer-times",
+      "name": "Quran Bangla Audio & Prayer Times",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23059669%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23064e3b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Crect%20x%3D%2214%22%20y%3D%2210%22%20width%3D%2252%22%20height%3D%2260%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M26%2C20%20Q40%2C30%2026%2C40%20Q40%2C50%2026%2C60%20M54%2C20%20Q40%2C30%2054%2C40%20Q40%2C50%2054%2C60%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%228%22%20fill%3D%22%23ffffff%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "quran-bangla-prayer-times-v5.0.1.apk",
+      "apkFileSize": "34.6 MB",
+      "shortDescription": "পূর্ণাঙ্গ কুরআন বাংলা অর্থ ও অডিওসহ, নামাজের সময়সূচী এবং সঠিক কিবলা কম্পাস।",
+      "fullDescription": "পবিত্র আল-কুরআনের ১১৪টি সূরার নির্ভুল আরবি তিলাওয়াত, সহজ বাংলা অর্থ, তাফসীর, বিষয়ভিত্তিক আয়াত এবং ডিজিটাল তসবিহ। বাংলাদেশের সকল জেলার জন্য সঠিক নামাজের সময়সূচী, রোযার ক্যালেন্ডার এবং কিবলা দিক-নির্দেশক। সম্পূর্ণ অফলাইনে ব্যবহারযোগ্য।",
+      "version": "v5.0.1",
+      "androidRequirement": "Android 6.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-5",
+      "categoryName": "Education & Knowledge",
+      "subCategory": "Islamic Utilities",
+      "packageName": "com.bashar.quranbangla",
+      "releaseDate": "2026-07-10",
+      "lastUpdatedDate": "2026-10-09",
+      "downloadCount": 852000,
+      "rating": 5,
+      "ratingCount": 45200,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23047857%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23064e3b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EAl-Quran%20Audio%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EBangla%20Meaning%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23065f46%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23022c22%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EPrayer%20Alarm%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EQibla%20Direction%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isPopular": true,
+      "isNew": false,
+      "tags": [
+        "Quran",
+        "Islamic",
+        "Prayer Times",
+        "Azan",
+        "Education"
+      ],
+      "features": [
+        "উচ্চ মানের অডিও তিলাওয়াত ও বাংলা তরজমা",
+        "৬৪ জেলার সঠিক নামাজের সময় ও আজান অ্যালার্ম",
+        "অফলাইন কিবলা কম্পাস ও ডিজিটাল তসবিহ",
+        "আয়াত কপি, বুকমার্ক ও শেয়ারিং সুবিধা"
+      ],
+      "whatsNew": "নতুন হাফেজি কুরআন ভিউ ও বাংলা তাফসীর সংযোজন করা হয়েছে।",
+      "sha256Checksum": "9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e",
+      "virusScanned": true
+    },
+    {
+      "id": "app-105",
+      "slug": "fast-safe-vpn-proxy",
+      "name": "Fast Safe VPN - Private Proxy",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23f59e0b%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23b45309%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Cpath%20d%3D%22M40%2C10%20L15%2C22%20V42%20C15%2C58%2040%2C74%2040%2C74%20C40%2C74%2065%2C58%2065%2C42%20V22%20Z%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2238%22%20r%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Crect%20x%3D%2237%22%20y%3D%2242%22%20width%3D%226%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%23ffffff%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "fast-safe-vpn-proxy-v3.0.4.apk",
+      "apkFileSize": "18.9 MB",
+      "shortDescription": "হাই-স্পিড সিকিউর ভিপিএন, আনলিমিটেড ব্যান্ডউইথ ও ১০০% প্রাইভেট ইন্টারনেট ব্রাউজিং।",
+      "fullDescription": "Fast Safe VPN আপনার ইন্টারনেট সংযোগকে সামরিক মানের AES-256 এনক্রিপশনের মাধ্যমে সুরক্ষিত করে। পাবলিক ওয়াইফাই ব্যবহার করার সময় আপনার ডেটা হ্যাকারদের থেকে নিরাপদ রাখে এবং যেকোনো ভৌগোলিক সীমাবদ্ধতা ছাড়া নিরাপদ ব্রাউজিং নিশ্চিত করে।",
+      "version": "v3.0.4",
+      "androidRequirement": "Android 7.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-4",
+      "categoryName": "Security & VPN",
+      "subCategory": "Privacy & Encryption",
+      "packageName": "com.bashar.fastsafevpn",
+      "releaseDate": "2026-08-15",
+      "lastUpdatedDate": "2026-10-05",
+      "downloadCount": 524000,
+      "rating": 4.8,
+      "ratingCount": 22100,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23b45309%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2378350f%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EUltra%20Fast%20Servers%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EGlobal%20Network%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2392400e%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23451a03%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3ENo%20Logs%20Policy%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EMilitary%20Encryption%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isPopular": true,
+      "isNew": false,
+      "tags": [
+        "VPN",
+        "Security",
+        "Privacy",
+        "Proxy",
+        "Fast Internet"
+      ],
+      "features": [
+        "৫০+ দেশের হাই-স্পিড ডেডিকেটেড সার্ভার",
+        "কঠোর নো-লগ ও নো-ট্র্যাকিং পলিসি",
+        "আনলিমিটেড ব্যান্ডউইথ ও গেমিং পিং বুস্টার",
+        "ওয়ান-ট্যাপ অটো কানেকশন"
+      ],
+      "whatsNew": "WireGuard প্রোটোকল যুক্ত হয়েছে, সংযোগ গতি দ্বিগুণ হয়েছে।",
+      "sha256Checksum": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "virusScanned": true
+    },
+    {
+      "id": "app-106",
+      "slug": "smart-file-explorer-vault",
+      "name": "Smart File Explorer & Vault Pro",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230284c7%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230369a1%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Cpath%20d%3D%22M12%2C14%20H34%20L42%2C24%20H68%20V66%20H12%20Z%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Crect%20x%3D%2222%22%20y%3D%2236%22%20width%3D%2236%22%20height%3D%2220%22%20rx%3D%224%22%20fill%3D%22%23ffffff%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "smart-file-explorer-v2.4.0.apk",
+      "apkFileSize": "15.3 MB",
+      "shortDescription": "ফাইল ম্যানেজার, ফাইল ট্রান্সফার ও গোপন ছবি-ভিডিও লুকিয়ে রাখার পিন ভল্ট।",
+      "fullDescription": "আপনার ফোন স্টোরেজ ও মেমোরি কার্ডের সকল ফাইল গোছাতে সাহায্য করে Smart File Explorer। এতে রয়েছে জিপ/র্যার এক্সট্র্যাক্টর, সরাসরি ওয়াইফাই ফাইল শেয়ারিং এবং গোপনীয় ছবি ও ভিডিও সুরক্ষিত রাখার জন্য এনক্রিপ্টেড পিন/ফিঙ্গারপ্রিন্ট ভল্ট।",
+      "version": "v2.4.0",
+      "androidRequirement": "Android 7.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-2",
+      "categoryName": "Productivity",
+      "subCategory": "File Management",
+      "packageName": "com.bashar.fileexplorer",
+      "releaseDate": "2026-09-10",
+      "lastUpdatedDate": "2026-10-08",
+      "downloadCount": 198000,
+      "rating": 4.7,
+      "ratingCount": 9800,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230369a1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23075985%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EFile%20Explorer%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EClean%20UI%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230284c7%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230c4a6e%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EPrivate%20Vault%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EPIN%20%26%20Fingerprint%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isPopular": false,
+      "isNew": true,
+      "tags": [
+        "File Manager",
+        "Vault",
+        "Productivity",
+        "Storage",
+        "Zip"
+      ],
+      "features": [
+        "সহজ ফাইল ব্রাউজিং ও ক্যাটাগরি ভিউ",
+        "ব্যক্তিগত ফাইল এনক্রিপ্টেড ভল্ট",
+        "জিপ ও রার ফাইল কম্প্রেস এবং এক্সট্র্যাক্ট",
+        "হাই-স্পিড ওয়াইফাই ফাইল ট্রান্সফার"
+      ],
+      "whatsNew": "ডার্ক মোড উন্নত করা হয়েছে এবং ক্লাউড স্টোরেজ ড্রাইভার সাপোর্ট যুক্ত হয়েছে।",
+      "sha256Checksum": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+      "virusScanned": true
+    },
+    {
+      "id": "app-107",
+      "slug": "wifi-speed-signal-analyzer",
+      "name": "WiFi Speed Master & Signal Analyzer",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2310b981%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230f766e%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2262%22%20r%3D%226%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M26%2C48%20Q40%2C34%2054%2C48%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M14%2C34%20Q40%2C16%2066%2C34%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "wifi-speed-signal-analyzer-v1.9.8.apk",
+      "apkFileSize": "9.4 MB",
+      "shortDescription": "রিয়েল-টাইম ওয়াইফাই ও মোবাইল ইন্টারনেট স্পিড টেস্ট এবং সিগন্যাল ডিটেক্টর।",
+      "fullDescription": "WiFi Speed Master দিয়ে মাত্র ৩ সেকেন্ডে আপনার ইন্টারনেট ব্রডব্যান্ড বা ৪G/৫G মোবাইলের সঠিক ডাউনলোড স্পিড, আপলোড স্পিড এবং পিং পরিমাপ করুন। ওয়াইফাই সিগন্যালের তীব্রতা মাপার গ্রাফ ও চ্যানেলের ভিড় বিশ্লেষণ করে সেরা সংযোগ খুঁজে নিন।",
+      "version": "v1.9.8",
+      "androidRequirement": "Android 6.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-1",
+      "categoryName": "Tools & Utilities",
+      "subCategory": "Network Tools",
+      "packageName": "com.bashar.wifianalyzer",
+      "releaseDate": "2026-08-30",
+      "lastUpdatedDate": "2026-10-06",
+      "downloadCount": 178000,
+      "rating": 4.6,
+      "ratingCount": 8400,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f766e%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23115e59%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3ESpeed%20Test%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EDownload%20%26%20Upload%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23047857%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23064e3b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3ESignal%20Map%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EBest%20Channel%20Finder%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isPopular": true,
+      "isNew": false,
+      "tags": [
+        "WiFi",
+        "Speed Test",
+        "Signal",
+        "Network",
+        "Ping"
+      ],
+      "features": [
+        "ডাউনলোড ও আপলোড স্পিড নির্ভুল টেস্ট",
+        "গেমিং পিং ও জিটার পরিমাপক",
+        "ওয়াইফাই চোর ট্র্যাকিং সুবিধা",
+        "গ্রাফিক সিগন্যাল স্ট্রেন্থ মিটার"
+      ],
+      "whatsNew": "৫G নেটওয়ার্ক ব্যান্ডউইথ টেস্ট ইঞ্জিন অপ্টিমাইজেশন।",
+      "sha256Checksum": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "virusScanned": true
+    },
+    {
+      "id": "app-108",
+      "slug": "camscan-document-pdf-scanner",
+      "name": "CamScan Document & PDF Scanner HD",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%233b82f6%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231d4ed8%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Crect%20x%3D%2214%22%20y%3D%2214%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2210%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2214%22%20fill%3D%22%23ffffff%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%228%22%20fill%3D%22%233b82f6%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2256%22%20cy%3D%2224%22%20r%3D%224%22%20fill%3D%22%23ffffff%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "camscan-document-pdf-scanner-v3.1.2.apk",
+      "apkFileSize": "28.2 MB",
+      "shortDescription": "মোবাইল ক্যামেরা দিয়ে যেকোনো কাগজ, বই বা আইডি কার্ড স্ক্যান করে এইচডি PDF বানান।",
+      "fullDescription": "CamScan Document Scanner হলো আপনার পকেটের মোবাইল স্ক্যানার। এটি ফোনের ক্যামেরা ব্যবহার করে স্বয়ংক্রিয়ভাবে কাগজের কোনা শনাক্ত করে ক্রপ করে এবং কালার ফিল্টারের মাধ্যমে একদম স্পষ্ট ও প্রফেশনাল পিডিএফ ডকুমেন্টে রূপান্তর করে। ওসিআর প্রযুক্তির মাধ্যমে ছবির লেখা টেক্সট হিসেবে কপি করার সুবিধা রয়েছে।",
+      "version": "v3.1.2",
+      "androidRequirement": "Android 7.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-2",
+      "categoryName": "Productivity",
+      "subCategory": "Office & PDF",
+      "packageName": "com.bashar.camscanner",
+      "releaseDate": "2026-09-22",
+      "lastUpdatedDate": "2026-10-12",
+      "downloadCount": 492000,
+      "rating": 4.9,
+      "ratingCount": 31500,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231d4ed8%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%231e3a8a%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EHD%20Document%20Scan%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EAuto%20Edge%20Detect%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232563eb%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23172554%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3EOCR%20Text%20Reader%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3ECopy%20Any%20Text%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isPopular": true,
+      "isNew": true,
+      "tags": [
+        "Scanner",
+        "PDF",
+        "CamScanner",
+        "Document",
+        "OCR"
+      ],
+      "features": [
+        "অটোমেটিক এজ ডিটেকশন ও স্মার্ট ক্রপ",
+        "ম্যাজিক কালার ফিল্টারিং ও ক্লিয়ার টেক্সট",
+        "বাংলা ও ইংরেজি ওসিআর (OCR) টেক্সট কনভার্টার",
+        "আইডি কার্ড ২-সাইড ফটোকপি মোড"
+      ],
+      "whatsNew": "নতুন ই-সিগনেচার ও ওয়াটারমার্ক প্রটেকশন ফিচার যোগ করা হয়েছে।",
+      "sha256Checksum": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+      "virusScanned": true
+    },
+    {
+      "id": "app-109",
+      "slug": "speedy-car-racing-nitro",
+      "name": "Speedy Car Racing 3D: Nitro Drift",
+      "iconUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20width%3D%22128%22%20height%3D%22128%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ef4444%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23991b1b%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shine%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%220%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220.35%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ffffff%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%20%20%3Crect%20width%3D%22128%22%20height%3D%2264%22%20rx%3D%2228%22%20fill%3D%22url(%23shine)%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(24%2C%2024)%22%3E%0A%20%20%20%20%20%20%0A%20%20%3Cpath%20d%3D%22M14%2C48%20Q20%2C26%2040%2C24%20Q60%2C26%2066%2C48%20L68%2C60%20H12%20Z%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2226%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%231e293b%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2254%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%231e293b%22%2F%3E%0A%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "apkFileUrl": "/uploads/apps/sample-app.apk",
+      "apkFileName": "speedy-car-racing-nitro-v1.5.0.apk",
+      "apkFileSize": "48.5 MB",
+      "shortDescription": "অফলাইন ৩ডি কার রেসিং, সুপার ড্র্রিফট এবং নাইট্রো স্পিড থ্রিলিং গেম।",
+      "fullDescription": "Speedy Car Racing 3D একটি রোমাঞ্চকর অফলাইন কার রেসিং গেম। আধুনিক সুপারকার কাস্টমাইজেশন, নাইট্রো বুস্ট, রিয়েলিস্টিক ড্রিফটিং ফিজিক্স এবং বিভিন্ন চ্যালেঞ্জিং ট্র্যাক নিয়ে সাজানো এই গেমটি যেকোনো অ্যান্ড্রয়েড ফোনে মসৃণভাবে চলে।",
+      "version": "v1.5.0",
+      "androidRequirement": "Android 6.0 and up",
+      "developerName": "Bashar Digital Studios",
+      "developerWebsite": "https://basharapk.com",
+      "categoryId": "cat-7",
+      "categoryName": "Entertainment & Gaming",
+      "subCategory": "Offline Racing",
+      "packageName": "com.bashar.carracing3d",
+      "releaseDate": "2026-09-05",
+      "lastUpdatedDate": "2026-10-10",
+      "downloadCount": 385000,
+      "rating": 4.6,
+      "ratingCount": 19200,
+      "screenshots": [
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23b91c1c%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237f1d1d%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3ENitro%20Speed%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3E3D%20Tracks%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+        "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20700%22%20width%3D%22400%22%20height%3D%22700%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22screenBg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23dc2626%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23450a0a%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22700%22%20rx%3D%2232%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2216%22%20y%3D%2216%22%20width%3D%22368%22%20height%3D%22668%22%20rx%3D%2224%22%20fill%3D%22url(%23screenBg)%22%2F%3E%0A%20%20%20%20%3C!--%20Top%20status%20bar%20--%3E%0A%20%20%20%20%3Crect%20x%3D%22150%22%20y%3D%2224%22%20width%3D%22100%22%20height%3D%2216%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22240%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22800%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%3ECustom%20Supercars%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22275%22%20fill%3D%22%23e2e8f0%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22500%22%20font-size%3D%2214%22%20text-anchor%3D%22middle%22%3EOffline%20Play%3C%2Ftext%3E%0A%20%20%20%20%3C!--%20Feature%20cards%20in%20screenshot%20--%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22320%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22420%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%22520%22%20width%3D%22320%22%20height%3D%2280%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.15%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22365%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3E100%25%20Verified%20Feature%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22465%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EHigh-Speed%20Performance%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%2270%22%20y%3D%22565%22%20fill%3D%22%23ffffff%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2216%22%3EMalware%20Scanned%20APK%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E"
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isPopular": false,
+      "isNew": true,
+      "tags": [
+        "Game",
+        "Racing",
+        "3D",
+        "Cars",
+        "Offline"
+      ],
+      "features": [
+        "সম্পূর্ণ ইন্টারনেট ছাড়া অফলাইন প্লে মোড",
+        "১৫+ আধুনিক সুপারকার ও আপগ্রেড অপশন",
+        "রিয়েলিস্টিক ইঞ্জিন সাউন্ড ও নাইট্রো ড্র্রিফট",
+        "স্মুথ গিয়ার ও স্টিয়ারিং কন্ট্রোল"
+      ],
+      "whatsNew": "নতুন নাইট সিটি ট্র্যাক এবং বৃষ্টি আবহাওয়া মোড যুক্ত হয়েছে।",
+      "sha256Checksum": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
+      "virusScanned": true
+    }
+  ],
   "downloads": [],
   "contactMessages": [
     {
